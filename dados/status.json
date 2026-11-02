@@ -1,6 +1,6 @@
 {
  "com_fipe": 323,
- "consultas_fipe": 15,
+ "consultas_fipe": 0,
  "fipe_limitada": false,
  "fontes": [
   {
@@ -78,7 +78,7 @@
    "paginas_lidas": 0
   }
  ],
- "gerado_em": "2026-11-02T10:26:58-03:00",
+ "gerado_em": "2026-11-02T10:30:27-03:00",
  "ok": true,
  "pedidos_aos_sites": 33,
  "problemas": [],
