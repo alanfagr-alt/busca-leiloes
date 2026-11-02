@@ -134,11 +134,19 @@ class Coleta:
         st = self.estado["leiloes"].get(k, {})
         if st.get("situacao") == "encerrado":
             return None
-        if st.get("situacao") in ("sem_veiculos", "sem_data") and desde(st.get("checado"), self.momento) < REVER_SEM_VEICULO:
+        if st.get("situacao") in ("sem_veiculos", "sem_data", "sem_impressao") and desde(st.get("checado"), self.momento) < REVER_SEM_VEICULO:
             return None
-        imp = sl.ler_impressao(self.cliente, dom, lid)
+        try:
+            imp = sl.ler_impressao(self.cliente, dom, lid)
+        except RuntimeError as e:
+            if "formato inesperado" not in str(e):
+                raise
+            imp = None
         if imp is None:
-            raise RuntimeError("a página de impressão não existe")
+            # venda direta e alguns leilões especiais não têm a versão para imprimir: revê em 7 dias
+            self.estado["leiloes"][k] = {"situacao": "sem_impressao", "checado": self.momento.isoformat()}
+            res["avisos"].append(f"leilão {lid}: sem página de impressão (revejo em 7 dias)")
+            return None
         res["paginas_lidas"] += 1
         veics = []
         for i, l in enumerate(imp["lotes"]):
