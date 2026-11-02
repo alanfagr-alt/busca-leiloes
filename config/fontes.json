@@ -1,0 +1,82 @@
+{
+  "plataforma_suporte_leiloes": [
+    {
+      "dominio": "www.consorciorioparkingcarioca.com",
+      "nome": "Consórcio Rio Parking Carioca",
+      "orgao": "DETRO/RJ · Governo do Estado",
+      "leiloeiro": "Elizabeth Christina Amorim de Almeida",
+      "titulo_leiloeiro": "Leiloeira",
+      "matricula": "317",
+      "selo": "edital",
+      "selo_texto": "Matrícula 317 da JUCERJA informada no edital oficial do DETRO/RJ.",
+      "cidade_padrao": "Rio de Janeiro/RJ"
+    },
+    {
+      "dominio": "www.edgarcarvalholeiloeiro.com.br",
+      "nome": "Edgar de Carvalho Leiloeiro",
+      "leiloeiro": "Edgar de Carvalho Junior",
+      "titulo_leiloeiro": "Leiloeiro",
+      "matricula": "32",
+      "selo": "junta",
+      "cidade_padrao": "Rio de Janeiro/RJ",
+      "orgao_por_titulo": {"SEOP": "Prefeitura do Rio · Ordem Pública"}
+    },
+    {
+      "dominio": "www.depaulaonline.com.br",
+      "nome": "De Paula Leilões",
+      "leiloeiro": "Luiz Tenório de Paula",
+      "titulo_leiloeiro": "Leiloeiro",
+      "matricula": "19",
+      "selo": "junta",
+      "cidade_padrao": "Rio de Janeiro/RJ"
+    },
+    {
+      "dominio": "www.portellaleiloes.com.br",
+      "nome": "Portella Leilões",
+      "leiloeiro": "da família Portella",
+      "titulo_leiloeiro": "Leiloeiros",
+      "matricula": "55, 105 e 127",
+      "selo": "junta",
+      "selo_texto": "Rodrigo Lopes Portella (55), Gustavo Portella Lourenço (105) e Fabiola Porto Portella (127) constam na lista oficial da JUCERJA. O edital diz quem conduz cada leilão.",
+      "cidade_padrao": "Rio de Janeiro/RJ"
+    },
+    {
+      "dominio": "www.rodrigocostaleiloeiro.com.br",
+      "nome": "Rodrigo Costa Leiloeiro",
+      "leiloeiro": "Rodrigo da Silva Costa",
+      "titulo_leiloeiro": "Leiloeiro",
+      "matricula": "126",
+      "selo": "junta",
+      "cidade_padrao": "Rio de Janeiro/RJ"
+    },
+    {
+      "dominio": "www.rymerleiloes.com.br",
+      "nome": "Rymer Leilões",
+      "leiloeiro": "Jonas Rymer",
+      "titulo_leiloeiro": "Leiloeiro",
+      "matricula": "79",
+      "selo": "junta",
+      "cidade_padrao": "Rio de Janeiro/RJ"
+    },
+    {
+      "dominio": "www.leiloesja.com.br",
+      "nome": "Leilões Já",
+      "leiloeiro": "Juliana Sevidanes de Araujo",
+      "titulo_leiloeiro": "Leiloeira",
+      "matricula": "238",
+      "selo": "junta",
+      "cidade_padrao": "Rio de Janeiro/RJ"
+    }
+  ],
+  "pendentes": [
+    {"dominio": "www.alexandroleiloeiro.com.br", "motivo": "mesma plataforma, outro modelo de site (rotas /eventos/leilao); quase só imóveis"},
+    {"dominio": "www.facanhaleiloes.com.br", "motivo": "mesma plataforma, outro modelo de site (rotas /eventos/leilao); quase só imóveis"},
+    {"dominio": "www.ricartleiloes.com.br", "motivo": "mesma plataforma, outro modelo de site (rotas /eventos/leilao); quase só imóveis"}
+  ],
+  "regras_custo": [
+    {"chaves": ["RPCDETRO"], "taxa_min": 395, "taxa_max": 595, "extra": 3,
+     "texto": "taxa administrativa de R$ 395 a R$ 595, conforme a categoria do veículo, + boleto de R$ 3"},
+    {"chaves": ["SEOP"], "taxa_carro": 820, "taxa_moto": 720,
+     "texto": "taxa administrativa de R$ 820 para carros e R$ 720 para motos"}
+  ]
+}

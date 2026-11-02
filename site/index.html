@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leilões de veículos no RJ: busca por cidade</title>
+<meta name="description" content="Leilões oficiais de carros e motos no Rio de Janeiro reunidos num lugar só, com distância até você, valor atual e comparação com a FIPE.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* layout: celular em coluna única (local, mapa, leilões, lotes); desktop com busca e mapa à esquerda e lotes à direita */
+  --bg:#F2F4F6; --surface:#FFFFFF; --ink:#111922; --muted:#566370; --line:#D6DDE4;
+  --accent:#1D4F9C; --accent-ink:#FFFFFF; --accent-soft:#E5EDF9;
+  --ok:#17734A; --ok-soft:#E2F2E9; --warn:#8F5600; --warn-soft:#FAEFDC; --hot:#B3261E; --hot-soft:#FBE6E4;
+  --map-land:#E8ECF0; --map-line:#C7D0D9; --map-sel:#D3E0F5;
+  --font-display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --font-body:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --r:12px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.45;-webkit-text-size-adjust:100%}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:6px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{max-width:1180px;margin:0 auto;padding:14px 12px 28px}
+h1,h2,h3{font-family:var(--font-display);text-wrap:balance;margin:0;letter-spacing:.2px}
+h1{font-size:clamp(34px,6vw,48px);line-height:1.02;font-weight:700}
+h2{font-size:26px;font-weight:700;line-height:1.1}
+h3{font-size:21px;font-weight:600;line-height:1.15}
+.num{font-variant-numeric:tabular-nums}
+
+/* topo */
+.top{display:grid;gap:10px;padding:8px 0 16px}
+.eyebrow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;color:var(--muted);font-size:14px}
+.pill{display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--accent);color:var(--accent);border-radius:999px;padding:2px 10px;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.6px}
+.lede{margin:0;color:var(--muted);max-width:62ch}
+
+/* grade */
+.grid{display:grid;gap:16px;grid-template-columns:1fr;grid-template-areas:"local" "mapa" "aucs" "lotes" "alerta" "seguro" "fontes"}
+@media (min-width:980px){
+  .grid{grid-template-columns:380px 1fr;grid-template-rows:auto auto auto auto 1fr auto;grid-template-areas:"local lotes" "mapa lotes" "aucs lotes" "alerta lotes" "seguro lotes" "fontes fontes";align-items:start}
+  .lotes-col{position:relative}
+}
+.a-local{grid-area:local}.a-mapa{grid-area:mapa}.a-aucs{grid-area:aucs}.a-lotes{grid-area:lotes}.a-alerta{grid-area:alerta}.a-seguro{grid-area:seguro}.a-fontes{grid-area:fontes}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px;display:grid;gap:12px;min-width:0}
+.card > h2{font-size:24px}
+.muted{color:var(--muted)}
+.small{font-size:14px}
+
+/* local */
+label{font-weight:700;font-size:14px}
+.field{display:grid;gap:6px}
+input[type=text],input[type=search],select{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;min-height:44px}
+input:focus,select:focus{border-color:var(--accent);outline:none}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg button,.chipbtn{font:inherit;font-size:15px;min-height:38px;padding:6px 12px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:700}
+.seg button:hover{border-color:var(--accent)}
+.resumo{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.stat{background:var(--bg);border-radius:10px;padding:8px 10px;display:grid;gap:0}
+.stat b{font-family:var(--font-display);font-size:28px;line-height:1;font-variant-numeric:tabular-nums}
+.stat span{font-size:13px;color:var(--muted)}
+
+/* mapa */
+.mapbox{position:relative;border-radius:10px;overflow:hidden;background:var(--bg);border:1px solid var(--line)}
+.mapbox svg{display:block;width:100%;height:auto}
+.mun{fill:var(--map-land);stroke:var(--map-line);stroke-width:1}
+.mun.sel{fill:var(--map-sel)}
+.state{fill:none;stroke:var(--muted);stroke-width:2}
+.ring{fill:var(--accent);fill-opacity:.07;stroke:var(--accent);stroke-width:2.5;stroke-dasharray:10 8}
+.me circle{fill:var(--ink);stroke:var(--surface);stroke-width:4}
+.me text,.dep text{font-family:var(--font-display);font-weight:700;fill:var(--ink);paint-order:stroke;stroke:var(--surface);stroke-width:7px;stroke-linejoin:round}
+.dep{cursor:pointer}
+.dep circle{fill:var(--accent);stroke:var(--surface);stroke-width:4}
+.dep.off circle{fill:var(--muted);fill-opacity:.55}
+.dep.on circle{stroke:var(--ink);stroke-width:6}
+.dep .cnt{fill:var(--accent-ink);stroke:none;font-size:30px}
+.legend{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted)}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:50%;vertical-align:-1px;margin-right:5px}
+
+/* leilões */
+.aucs{display:grid;gap:10px}
+@media (max-width:979px){.aucs{grid-auto-flow:column;grid-auto-columns:minmax(272px,86%);overflow-x:auto;padding-bottom:6px;scroll-snap-type:x mandatory}.auc{scroll-snap-align:start}}
+.auc{border:1px solid var(--line);border-radius:10px;padding:12px;display:grid;gap:8px;background:var(--surface);align-content:start}
+.auc.off{opacity:.55}
+.auc-h{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 8px;align-items:flex-start}
+.org{font-size:13px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.4px}
+.auc p{margin:0;font-size:14px}
+.links{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.links a,.btn{font:inherit;font-size:14px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:6px 12px;border-radius:8px;border:1.5px solid var(--accent);color:var(--accent);background:transparent;cursor:pointer}
+.btn.solid{background:var(--accent);color:var(--accent-ink)}
+.links a:hover,.btn:hover{background:var(--accent-soft)}
+.btn.solid:hover{filter:brightness(1.08);background:var(--accent)}
+
+/* chips de estado */
+.chip{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:700;border-radius:999px;padding:3px 9px;white-space:nowrap;background:var(--bg);color:var(--muted)}
+.chip.hot{background:var(--hot-soft);color:var(--hot)}
+.chip.warn{background:var(--warn-soft);color:var(--warn)}
+.chip.ok{background:var(--ok-soft);color:var(--ok)}
+.chip.info{background:var(--accent-soft);color:var(--accent)}
+.seal{display:flex;gap:8px;align-items:flex-start;font-size:13.5px;border-radius:8px;padding:8px 10px}
+.seal svg{flex:none;margin-top:1px}
+.seal.ok{background:var(--ok-soft);color:var(--ok)}
+.seal.edital{background:var(--accent-soft);color:var(--accent)}
+.seal b{display:block}
+.seal span{color:var(--ink);opacity:.85}
+
+/* filtros */
+.filters{display:grid;gap:10px}
+.frow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+@media (max-width:560px){.frow{grid-template-columns:1fr 1fr}.frow .f-ord{grid-column:1 / -1}}
+.toggles{display:flex;flex-wrap:wrap;gap:14px;font-size:14px}
+.toggles label{font-weight:400;display:inline-flex;gap:6px;align-items:center;cursor:pointer}
+.toggles input{width:18px;height:18px;accent-color:var(--accent)}
+.active{display:flex;flex-wrap:wrap;gap:6px}
+.chipbtn{font-size:13px;min-height:32px;padding:4px 10px;background:var(--accent-soft);border-color:transparent;color:var(--accent);font-weight:700}
+.listhead{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
+.listhead p{margin:0}
+
+/* lotes */
+.lots{display:grid;gap:10px}
+@media (min-width:1180px){.lots{grid-template-columns:1fr 1fr}}
+.lot{border:1px solid var(--line);border-radius:10px;padding:12px;display:grid;grid-template-columns:auto 1fr;gap:4px 12px;background:var(--surface);align-content:start}
+.lot.ended{opacity:.6}
+.tag{grid-row:1 / span 2;width:58px;border:2px solid var(--ink);border-radius:7px;overflow:hidden;text-align:center;align-self:start;background:var(--surface)}
+.tag .band{display:block;background:var(--accent);color:var(--accent-ink);font-size:10px;font-weight:700;letter-spacing:1.4px;padding:2px 0}
+.tag .n{display:block;font-family:var(--font-display);font-weight:700;font-size:24px;line-height:1.15;font-variant-numeric:tabular-nums}
+.lot-t{display:flex;gap:8px;align-items:flex-start;justify-content:space-between;min-width:0}
+.lot-t h3{font-size:20px;display:flex;gap:6px;align-items:center;min-width:0}
+.lot-t h3 svg{flex:none;color:var(--muted)}
+.price{text-align:right;flex:none}
+.price b{font-family:var(--font-display);font-size:24px;line-height:1;display:block;font-variant-numeric:tabular-nums}
+.price span{font-size:12.5px;color:var(--muted)}
+.sub{font-size:14px;color:var(--muted)}
+.lot-b{grid-column:1 / -1;display:grid;gap:8px;margin-top:4px}
+.fipe{display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:center;font-size:13.5px}
+.bar{height:8px;background:var(--bg);border-radius:99px;overflow:hidden;border:1px solid var(--line)}
+.bar i{display:block;height:100%;background:var(--accent);border-radius:99px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+details{border-top:1px dashed var(--line);padding-top:6px}
+summary{cursor:pointer;font-weight:700;font-size:14px;color:var(--accent);min-height:30px;display:flex;align-items:center}
+.det{display:grid;gap:6px;font-size:14px;padding:6px 0 2px}
+.det p{margin:0}
+.det dl{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;margin:0}
+.det dt{color:var(--muted)}
+.det dd{margin:0;font-variant-numeric:tabular-nums}
+.more{justify-self:center}
+.empty{padding:20px;text-align:center;border:1px dashed var(--line);border-radius:10px;display:grid;gap:10px;justify-items:center}
+
+/* alerta */
+.aform{display:grid;gap:10px}
+.arow{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.amsg{margin:0;font-size:14px;padding:10px;border-radius:8px;background:var(--ok-soft);color:var(--ok)}
+.amsg.warn{background:var(--warn-soft);color:var(--warn)}
+.alist{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.alist li{display:flex;justify-content:space-between;gap:8px;align-items:center;font-size:14px;border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+.alist button{font:inherit;font-size:13px;background:none;border:none;color:var(--muted);text-decoration:underline;cursor:pointer;min-height:32px}
+
+/* segurança */
+.steps{margin:0;padding:0;list-style:none;display:grid;gap:10px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:28px 1fr;gap:10px;font-size:14.5px}
+.steps li::before{counter-increment:s;content:counter(s);font-family:var(--font-display);font-weight:700;font-size:18px;width:28px;height:28px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center}
+.fontes{font-size:13.5px;color:var(--muted)}
+.fontes ul{margin:6px 0 0;padding-left:18px;display:grid;gap:4px}
+@media (prefers-reduced-motion: reduce){*{scroll-behavior:auto!important;transition:none!important}}
+[hidden]{display:none!important}
+.load{padding:28px 16px;text-align:center;color:var(--muted)}
+.cluster text.cnt{font-size:30px}
+.pracas{margin:0;padding:0;list-style:none;display:grid;gap:2px;font-size:13.5px;color:var(--muted)}
+.pracas b{color:var(--ink);font-weight:700}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="eyebrow"><span class="pill">Atualização automática</span><span id="captura">Carregando os leilões…</span></div>
+    <p class="lede">Leilões oficiais de veículos reunidos num lugar só. Cada leilão mostra quem é o leiloeiro e a matrícula dele na Junta Comercial, e o lance é sempre dado no site oficial do leiloeiro.</p>
+  </header>
+
+  <div id="carregando" class="card load" role="status">Buscando os leilões abertos…</div>
+
+  <main class="grid" id="app" hidden>
+    <section class="card a-local" aria-labelledby="h-local">
+      <h2 id="h-local" class="sr-only">Onde você está</h2>
+      <div class="field">
+        <label for="cidade">Sua cidade</label>
+        <input id="cidade" type="text" list="lista-cidades" autocomplete="off" placeholder="Digite e escolha na lista">
+        <datalist id="lista-cidades"></datalist>
+        <span class="small muted" id="cidade-msg">Distâncias em linha reta até onde o veículo está.</span>
+      </div>
+      <div class="field">
+        <span id="lbl-raio" style="font-weight:700;font-size:14px">Até que distância</span>
+        <div class="seg" role="group" aria-labelledby="lbl-raio" id="raio"></div>
+      </div>
+      <div class="resumo" aria-live="polite">
+        <div class="stat"><b id="st-lotes">0</b><span>veículos</span></div>
+        <div class="stat"><b id="st-aucs">0</b><span>leilões</span></div>
+        <div class="stat"><b id="st-prox">0</b><span id="st-prox-l">próximo fecha</span></div>
+      </div>
+    </section>
+
+    <section class="card a-mapa" aria-labelledby="h-mapa">
+      <h2 id="h-mapa">Onde estão os veículos</h2>
+      <div class="mapbox"><svg id="mapa" role="img" aria-label="Mapa do estado do Rio de Janeiro com os locais dos veículos e a sua cidade"></svg></div>
+      <div class="legend"><span><i style="background:var(--ink)"></i>Sua cidade</span><span><i style="background:var(--accent)"></i>Local dos veículos (quantidade). Toque para filtrar</span></div>
+    </section>
+
+    <section class="card a-aucs" aria-labelledby="h-aucs">
+      <h2 id="h-aucs">Leilões no seu raio</h2>
+      <p class="small muted" style="margin:0">Os que fecham antes aparecem primeiro.</p>
+      <div class="aucs" id="aucs"></div>
+    </section>
+
+    <section class="card a-lotes lotes-col" aria-labelledby="h-lotes">
+      <div class="listhead"><h2 id="h-lotes">Veículos</h2><p class="small muted" id="lh-count"></p></div>
+      <div class="filters">
+        <div class="seg" role="group" aria-label="Tipo de veículo" id="tipo">
+          <button type="button" data-v="todos" aria-pressed="true">Todos</button>
+          <button type="button" data-v="carros" aria-pressed="false">Carros</button>
+          <button type="button" data-v="motos" aria-pressed="false">Motos</button>
+        </div>
+        <div class="field">
+          <label for="busca" class="sr-only">Buscar modelo</label>
+          <input id="busca" type="search" placeholder="Buscar modelo, ex.: CG 160, Onix, Biz" autocomplete="off">
+        </div>
+        <div class="frow">
+          <div class="field"><label for="f-max">Valor até</label>
+            <select id="f-max"><option value="0">Qualquer</option><option value="1500">R$ 1.500</option><option value="3000">R$ 3.000</option><option value="5000">R$ 5.000</option><option value="10000">R$ 10.000</option><option value="20000">R$ 20.000</option><option value="40000">R$ 40.000</option><option value="80000">R$ 80.000</option></select></div>
+          <div class="field"><label for="f-ano">Ano a partir de</label>
+            <select id="f-ano"><option value="0">Qualquer</option><option value="2005">2005</option><option value="2010">2010</option><option value="2015">2015</option><option value="2018">2018</option><option value="2020">2020</option><option value="2022">2022</option></select></div>
+          <div class="field f-ord"><label for="f-ord">Ordenar por</label>
+            <select id="f-ord"><option value="perto">Mais perto</option><option value="fecha">Fecha antes</option><option value="barato">Menor valor agora</option><option value="fipe">Mais abaixo da FIPE</option><option value="lances">Mais disputados</option></select></div>
+        </div>
+        <div class="toggles">
+          <label><input type="checkbox" id="t-motor" checked> Mostrar veículos sem motor</label>
+          <label><input type="checkbox" id="t-fim"> Mostrar leilões encerrados</label>
+        </div>
+        <div class="active" id="ativos"></div>
+      </div>
+      <div class="lots" id="lots"></div>
+      <button type="button" class="btn more" id="mais" hidden>Mostrar mais</button>
+    </section>
+
+    <section class="card a-alerta" aria-labelledby="h-alerta">
+      <h2 id="h-alerta">Me avise quando aparecer</h2>
+      <p class="small muted" style="margin:0">Diga o que procura. O alerta usa sua cidade e a distância escolhidas acima.</p>
+      <form class="aform" id="aform" novalidate>
+        <div class="field"><label for="a-q">Modelo</label><input id="a-q" type="text" placeholder="Ex.: CG 160, Onix, Biz" required></div>
+        <div class="arow">
+          <div class="field"><label for="a-tipo">Tipo</label><select id="a-tipo"><option value="todos">Carro ou moto</option><option value="carros">Carro</option><option value="motos">Moto</option></select></div>
+          <div class="field"><label for="a-max">Pagando até</label><select id="a-max"><option value="0">Qualquer valor</option><option value="3000">R$ 3.000</option><option value="5000">R$ 5.000</option><option value="10000">R$ 10.000</option><option value="20000">R$ 20.000</option><option value="40000">R$ 40.000</option></select></div>
+        </div>
+        <button type="submit" class="btn solid">Criar alerta</button>
+      </form>
+      <p class="amsg" id="a-msg" hidden></p>
+      <ul class="alist" id="a-list"></ul>
+      <p class="small muted" id="a-status" style="margin:0">O alerta fica salvo neste aparelho e mostra quantos veículos batem com ele sempre que você voltar aqui.</p>
+    </section>
+
+    <section class="card a-seguro" aria-labelledby="h-seguro">
+      <h2 id="h-seguro">Antes de dar um lance</h2>
+      <ol class="steps">
+        <li><span><b>Confira o selo do leiloeiro.</b> Verde: nome e matrícula na lista oficial de leiloeiros da Junta Comercial. Azul: matrícula informada no edital do órgão público.</span></li>
+        <li><span><b>Dê lance só no site oficial.</b> Aqui você encontra e compara. O cadastro, o lance e o pagamento acontecem no site do leiloeiro, pelos meios que o edital indica.</span></li>
+        <li><span><b>Leia o edital e visite o veículo.</b> Veículo de leilão é vendido no estado em que está, sem garantia. Sem motor, outro estado ou gravação danificada exigem regularização por sua conta.</span></li>
+        <li><span><b>Some os custos.</b> Além do lance entram 5% do leiloeiro, taxas do edital, transferência, IPVA do ano e vistoria.</span></li>
+        <li><span><b>Desconfie de preço bom demais fora daqui.</b> Site de leilão falso costuma copiar fotos e nomes de leiloeiros reais e pedir pagamento por fora.</span></li>
+      </ol>
+    </section>
+
+    <footer class="card a-fontes fontes">
+      <h2 style="font-size:20px;color:var(--ink)">De onde vêm os dados</h2>
+      <p style="margin:0" id="sobre"></p>
+      <ul id="fontes"></ul>
+    </footer>
+  </main>
+</div>
+
+<script>
+/* ---------- utilidades ---------- */
+const $=s=>document.querySelector(s);
+const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fmt0=new Intl.NumberFormat("pt-BR",{style:"currency",currency:"BRL",maximumFractionDigits:0});
+const fmt2=new Intl.NumberFormat("pt-BR",{style:"currency",currency:"BRL",minimumFractionDigits:2,maximumFractionDigits:2});
+const brl=v=>fmt0.format(Math.round(v));
+const brl2=v=>fmt2.format(v);
+const mil=v=>v>=10000?("R$ "+(v/1000).toLocaleString("pt-BR",{maximumFractionDigits:1})+" mil"):brl(v);
+const norm=s=>String(s).normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase().replace(/[^a-z0-9]+/g," ").replace(/(\D)(\d)/g,"$1 $2").replace(/(\d)(\D)/g,"$1 $2").replace(/\s+/g," ").trim();
+function km(a,b){const R=6371,t=Math.PI/180,dl=(b.lat-a.lat)*t,dn=(b.lon-a.lon)*t;const x=Math.sin(dl/2)**2+Math.cos(a.lat*t)*Math.cos(b.lat*t)*Math.sin(dn/2)**2;return 2*R*Math.asin(Math.sqrt(x));}
+const DIAS=["dom","seg","ter","qua","qui","sex","sáb"];
+const dd2=n=>String(n).padStart(2,"0");
+function hora(d){return d.getHours()+"h"+(d.getMinutes()?dd2(d.getMinutes()):"");}
+function quando(t,comHora){
+  const d=new Date(t), now=new Date();
+  const h=comHora===false?"":", "+hora(d);
+  const day=x=>new Date(x.getFullYear(),x.getMonth(),x.getDate()).getTime();
+  const dd=Math.round((day(d)-day(now))/864e5);
+  const data=DIAS[d.getDay()]+", "+dd2(d.getDate())+"/"+dd2(d.getMonth()+1);
+  if(t<=Date.now()) return {txt:"Encerrado em "+data,cls:"",short:"encerrado",ended:true};
+  if(dd===0) return {txt:"Fecha hoje"+h,cls:"hot",short:"hoje"};
+  if(dd===1) return {txt:"Fecha amanhã"+h,cls:"hot",short:"amanhã"};
+  if(dd<=3) return {txt:"Fecha "+data+h,cls:"warn",short:dd+" dias"};
+  return {txt:"Fecha "+data+h,cls:"",short:dd+" dias"};
+}
+const ICON={
+ m:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5.5" cy="16.5" r="3.5"/><circle cx="18.5" cy="16.5" r="3.5"/><path d="M5.5 16.5 9 10h5l4.5 6.5"/><path d="M14 10l-1.5-3H10"/><path d="M15 6.5h2.5"/></svg>',
+ c:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 16v-3l2-5h14l2 5v3"/><path d="M3 13h18"/><path d="M3 16h18"/><circle cx="7" cy="16.5" r="2"/><circle cx="17" cy="16.5" r="2"/></svg>'
+};
+const CHECK='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 4 5.5v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10v-6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>';
+const DOC='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6v18h12V7z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 16h6"/></svg>';
+
+/* ---------- dados ---------- */
+let DATA,AUCS,LOCS,LOTS,CITIES,GEO,GERADO;
+// colunas de cada lote
+const L={auc:0,lote:1,tipo:2,marca:3,modelo:4,fab:5,mod:6,cor:7,comb:8,semMotor:9,obs:10,ini:11,atual:12,lances:13,fipe:14,fipeModelo:15,fipeAno:16,local:17,blind:18};
+
+/* ---------- estado ---------- */
+const LS_PREF="leiloes-busca-pref";
+const S={city:null,raio:100,tipo:"todos",q:"",max:0,ano:0,ord:"perto",motor:true,fim:false,locs:null,locNome:"",auc:null,shown:24};
+let DL=[],DA=[];
+function recalc(){DL=LOCS.map(l=>km(S.city,l));DA=AUCS.map((a,i)=>a.locs.length?Math.min(...a.locs.map(j=>DL[j])):9e9);}
+function salvarPref(){try{localStorage.setItem(LS_PREF,JSON.stringify({c:S.city&&S.city.ibge,r:S.raio}));}catch(e){}}
+
+/* ---------- filtros ---------- */
+function base(){
+  const now=Date.now();
+  return LOTS.map((r,i)=>({r,i,a:AUCS[r[L.auc]],d:DL[r[L.local]],ended:AUCS[r[L.auc]].t<=now}))
+   .filter(o=>S.fim||!o.ended)
+   .filter(o=>!S.raio||o.d<=S.raio);
+}
+function filtrar(list){
+  const q=norm(S.q);
+  return list.filter(o=>
+    (S.tipo==="todos"||(S.tipo==="carros"?o.r[L.tipo]==="c":o.r[L.tipo]==="m")) &&
+    (!q||norm(o.r[L.marca]+" "+o.r[L.modelo]).includes(q)) &&
+    (!S.max||o.r[L.atual]<=S.max) &&
+    (!S.ano||(o.r[L.mod]||0)>=S.ano) &&
+    (S.motor||!o.r[L.semMotor]) &&
+    (S.locs===null||S.locs.includes(o.r[L.local])) &&
+    (S.auc===null||o.r[L.auc]===S.auc));
+}
+function ordenar(list){
+  const pf=o=>o.r[L.fipe]?o.r[L.atual]/o.r[L.fipe]:9;
+  const f={perto:(a,b)=>a.d-b.d||a.a.t-b.a.t||a.r[L.atual]-b.r[L.atual],
+    fecha:(a,b)=>a.a.t-b.a.t||a.d-b.d||a.r[L.atual]-b.r[L.atual],
+    barato:(a,b)=>a.r[L.atual]-b.r[L.atual],
+    fipe:(a,b)=>pf(a)-pf(b),
+    lances:(a,b)=>b.r[L.lances]-a.r[L.lances]||a.r[L.atual]-b.r[L.atual]}[S.ord];
+  return list.sort(f);
+}
+
+/* ---------- custos ---------- */
+function custo(o){
+  const v=o.r[L.atual],com=v*0.05,c=o.a.custo||{};
+  if(c.taxa_carro){const adm=o.r[L.tipo]==="c"?c.taxa_carro:c.taxa_moto;return {txt:brl(v+com+adm),conta:brl2(v)+" + 5% do leiloeiro ("+brl2(com)+") + "+c.texto};}
+  if(c.taxa_min){const ex=c.extra||0;return {txt:brl(v+com+c.taxa_min+ex)+" a "+brl(v+com+c.taxa_max+ex),conta:brl2(v)+" + 5% do leiloeiro ("+brl2(com)+") + "+c.texto};}
+  return {txt:brl(v+com)+" + taxas do edital",conta:brl2(v)+" + 5% do leiloeiro ("+brl2(com)+") + as taxas e despesas que o edital indicar"};
+}
+
+/* ---------- render: local ---------- */
+const RAIOS=[[50,"50 km"],[100,"100 km"],[150,"150 km"],[300,"300 km"],[0,"Sem limite"]];
+function renderRaio(){$("#raio").innerHTML=RAIOS.map(([v,l])=>`<button type="button" data-v="${v}" aria-pressed="${S.raio===v}">${l}</button>`).join("");}
+function renderResumo(b){
+  const aucs=[...new Set(b.map(o=>o.r[L.auc]))];
+  $("#st-lotes").textContent=b.length.toLocaleString("pt-BR");
+  $("#st-aucs").textContent=aucs.length;
+  const prox=aucs.map(i=>AUCS[i]).filter(a=>a.t>Date.now()).sort((x,y)=>x.t-y.t)[0];
+  if(prox){const q=quando(prox.t,prox.hora);$("#st-prox").textContent=q.short;$("#st-prox-l").textContent="próximo fecha ("+LOCS[prox.locs[0]].lbl+")";}
+  else{$("#st-prox").textContent="nenhum";$("#st-prox-l").textContent="leilão aberto no raio";}
+}
+
+/* ---------- render: mapa ---------- */
+let M,P,mapBase="",CLUST=[];
+function buildMapBase(){
+  M=GEO.meta;P=(lat,lon)=>[(lon-M.minx)*M.k*M.sx,(M.maxy-lat)*M.sx];
+  mapBase=Object.entries(GEO.mun).map(([id,m])=>`<path class="mun" data-id="${id}" d="${m.d}"><title>${esc(m.n)}</title></path>`).join("")+`<path class="state" d="${GEO.state}"/>`;
+  // junta locais muito próximos num ponto só
+  CLUST=[];
+  LOCS.forEach((l,i)=>{const [x,y]=P(l.lat,l.lon);if(x<-20||x>M.W+20||y<-20||y>M.H+20)return;
+    const c=CLUST.find(c=>Math.hypot(c.x-x,c.y-y)<30);if(c){c.ids.push(i);}else CLUST.push({x,y,ids:[i]});});
+}
+function renderMapa(b){
+  const svg=$("#mapa");
+  svg.setAttribute("viewBox",`0 0 ${M.W} ${M.H}`);
+  const cnt=LOCS.map(()=>0);b.forEach(o=>cnt[o.r[L.local]]++);
+  const [cx,cy]=P(S.city.lat,S.city.lon);
+  const inside=cx>=-40&&cx<=M.W+40&&cy>=-40&&cy<=M.H+40;
+  let ring="";
+  if(S.raio&&inside){const rr=S.raio/111.32*M.sx;ring=`<circle class="ring" cx="${cx.toFixed(0)}" cy="${cy.toFixed(0)}" r="${rr.toFixed(0)}"/>`;}
+  const placed=[];if(inside)placed.push([cx-60,cy-56,cx+60,cy-20]);
+  const hit=r=>placed.some(p=>!(r[2]<p[0]||r[0]>p[2]||r[3]<p[1]||r[1]>p[3]));
+  const items=CLUST.map(c=>{const n=c.ids.reduce((s,i)=>s+cnt[i],0);const main=c.ids.slice().sort((a,b)=>cnt[b]-cnt[a])[0];return {...c,n,main};}).sort((a,b)=>b.n-a.n);
+  const deps=items.map(c=>{
+    const r=c.n?16+Math.sqrt(c.n)*1.6:13;const on=S.locs&&c.ids.every(i=>S.locs.includes(i));
+    const comLotes=c.ids.filter(i=>cnt[i]).length;const lbl=LOCS[c.main].lbl+(comLotes>1?" e região":"");const w=lbl.length*16;let lx=c.x,ly=null,anchor="middle";
+    for(const [px,py,an] of [[c.x,c.y-r-12,"middle"],[c.x,c.y+r+30,"middle"],[c.x+r+8,c.y+10,"start"],[c.x-r-8,c.y+10,"end"]]){
+      const x0=an==="middle"?px-w/2:(an==="start"?px:px-w);const rect=[x0,py-26,x0+w,py+4];
+      if(!hit(rect)&&x0>-10&&x0+w<M.W+10){placed.push(rect);lx=px;ly=py;anchor=an;break;}}
+    const cls="dep"+(c.n?"":" off")+(on?" on":"");
+    const nomes=c.ids.map(i=>LOCS[i].nome).join(", ");
+    return `<g class="${cls}" data-locs="${c.ids.join(",")}" tabindex="0" role="button" aria-label="${esc(nomes)}: ${c.n} veículos no filtro. Filtrar por este local"><circle cx="${c.x.toFixed(0)}" cy="${c.y.toFixed(0)}" r="${r.toFixed(0)}"/><text class="cnt" x="${c.x.toFixed(0)}" y="${(c.y+10).toFixed(0)}" text-anchor="middle">${c.n}</text>${ly!==null?`<text x="${lx.toFixed(0)}" y="${ly.toFixed(0)}" text-anchor="${anchor}" font-size="30">${esc(lbl)}</text>`:""}</g>`;}).join("");
+  const me=inside?`<g class="me"><circle cx="${cx.toFixed(0)}" cy="${cy.toFixed(0)}" r="11"/><text x="${cx.toFixed(0)}" y="${(cy-22).toFixed(0)}" text-anchor="middle" font-size="32">${esc(S.city.n)}</text></g>`:"";
+  svg.innerHTML=mapBase+ring+deps+me;
+  svg.querySelectorAll(".mun").forEach(p=>p.classList.toggle("sel",p.dataset.id===S.city.ibge));
+  const fora=LOTS.filter(r=>{const l=LOCS[r[L.local]];const [x,y]=P(l.lat,l.lon);return x<-20||x>M.W+20||y<-20||y>M.H+20;}).length;
+  $("#cidade-msg").textContent=(inside?"Distâncias em linha reta até onde o veículo está.":"Sua cidade fica fora do mapa do RJ. As distâncias continuam valendo.")+(fora?` ${fora} ${fora===1?"veículo fica":"veículos ficam"} em outro estado e não aparece${fora===1?"":"m"} no mapa.`:"");
+}
+
+/* ---------- render: leilões ---------- */
+const matTxt=a=>(/,| e /.test(a.mat)?"matrículas ":"matrícula ")+esc(a.mat);
+function seloHTML(a,compact){
+  const icon=a.selo==="ok"?CHECK:DOC;
+  const head=a.selo==="ok"?"Leiloeiro na lista da Junta":"Matrícula no edital oficial";
+  return `<div class="seal ${a.selo==="ok"?"ok":"edital"}">${icon}<div><b>${head}</b><span>${esc(a.titLei)} ${esc(a.leiloeiro)}, ${matTxt(a)} (JUCERJA)${compact?"":". "+esc(a.seloTxt)}</span></div></div>`;
+}
+function pracasHTML(a){
+  if(!a.pracas||a.pracas.length<2)return "";
+  return `<ul class="pracas">${a.pracas.map(p=>{const d=new Date(p.fim);const ok=d.getTime()>Date.now();return `<li>${ok?"<b>":""}${esc(p.n||"Leilão")}: ${dd2(d.getDate())}/${dd2(d.getMonth()+1)}${p.hora?" às "+hora(d):""}${ok?"</b>":" (encerrado)"}</li>`;}).join("")}</ul>`;
+}
+function renderAucs(b){
+  const vis=new Set(b.map(o=>o.r[L.auc]));
+  const order=AUCS.map((a,i)=>i).filter(i=>S.fim||AUCS[i].t>Date.now()).sort((x,y)=>(vis.has(y)-vis.has(x))||AUCS[x].t-AUCS[y].t||DA[x]-DA[y]);
+  const lim=S.mostrarTodos?order.length:12;
+  $("#aucs").innerHTML=order.slice(0,lim).map(i=>{const a=AUCS[i];const all=LOTS.filter(r=>r[L.auc]===i);const c=all.filter(r=>r[L.tipo]==="c").length;
+    const inR=!S.raio||DA[i]<=S.raio;const q=quando(a.t,a.hora);const loc=LOCS[a.locs[0]];
+    const partes=[c?c+(c===1?" carro":" carros"):"",all.length-c?(all.length-c)+(all.length-c===1?" moto":" motos"):""].filter(Boolean).join(" e ");
+    return `<article class="auc${inR&&!q.ended?"":" off"}">
+      <div class="auc-h"><span class="org">${esc(a.org)}</span><span class="chip ${q.cls}">${esc(q.txt)}</span></div>
+      <h3>${esc(a.titulo)}</h3>
+      <p><b>${esc(loc.nome)}</b>${loc.aprox?" (local aproximado)":""}, a <span class="num">${Math.round(DA[i])}</span> km de ${esc(S.city.n)}${inR?"":" (fora do raio)"}</p>
+      <p class="muted">${all.length} ${all.length===1?"veículo":"veículos"}${partes?": "+partes:""} · ${esc(a.modo)}</p>
+      ${pracasHTML(a)}
+      ${a.visita?`<p class="muted">Visitação: ${esc(a.visita)}</p>`:""}
+      ${seloHTML(a,true)}
+      <div class="links"><button type="button" class="btn${S.auc===i?" solid":""}" data-auc="${i}">${S.auc===i?"Mostrando só este":"Ver só estes lotes"}</button><a href="${esc(a.site)}" target="_blank" rel="noopener">Site oficial</a>${a.edital?`<a href="${esc(a.edital)}" target="_blank" rel="noopener">Edital (PDF)</a>`:""}</div>
+    </article>`;}).join("")+(order.length>lim?`<button type="button" class="btn more" id="mais-aucs">Ver todos os ${order.length} leilões</button>`:"");
+}
+
+/* ---------- render: lotes ---------- */
+const ATUALIZ=()=>{const d=new Date(GERADO);return dd2(d.getDate())+"/"+dd2(d.getMonth()+1)+", "+hora(d);};
+function lotHTML(o){
+  const r=o.r,a=o.a,q=quando(a.t,a.hora),loc=LOCS[r[L.local]];
+  const ano=r[L.fab]&&r[L.mod]?(r[L.fab]===r[L.mod]?r[L.fab]:r[L.fab]+"/"+r[L.mod]):(r[L.mod]||"");
+  const sub=[ano,r[L.cor],r[L.comb]].filter(Boolean).join(" · ");
+  const chips=[`<span class="chip ${q.cls}">${esc(q.txt)}</span>`];
+  if(r[L.semMotor]) chips.push(`<span class="chip warn">Sem motor</span>`);
+  if(r[L.blind]) chips.push(`<span class="chip info">Blindado</span>`);
+  if(/outro estado/i.test(r[L.obs])) chips.push(`<span class="chip warn">Outro estado</span>`);
+  if(/clone|dubl[eê]|adultera/i.test(r[L.obs])) chips.push(`<span class="chip warn">Ver observação</span>`);
+  else if(/trincado|oxida|sem o banco|danificad|sem placa|diferente|sem documento|restri[cç][aã]o/i.test(r[L.obs])&&!r[L.semMotor]) chips.push(`<span class="chip warn">Ver observação</span>`);
+  let fipe="";
+  if(r[L.fipe]){const pc=r[L.atual]/r[L.fipe];fipe=`<div class="fipe"><span>FIPE ${mil(r[L.fipe])}</span><div class="bar" aria-hidden="true"><i style="width:${Math.min(100,Math.max(3,pc*100)).toFixed(0)}%"></i></div><b class="num">${Math.round(pc*100)}% da FIPE</b></div>`;}
+  else if(!r[L.semMotor]) fipe=`<div class="fipe small muted"><span>FIPE: sem referência segura para este modelo</span></div>`;
+  const c=custo(o);
+  const ini=r[L.ini]!=null?brl2(r[L.ini]):"não informado";
+  return `<article class="lot${o.ended?" ended":""}">
+    <div class="tag" aria-label="Lote ${esc(String(r[L.lote]).split(".")[0])}"><span class="band">LOTE</span><span class="n">${esc(String(r[L.lote]).split(".")[0])}</span></div>
+    <div class="lot-t"><h3>${ICON[r[L.tipo]]}<span>${esc(r[L.marca])} ${esc(r[L.modelo])}</span></h3><div class="price"><b>${brl(r[L.atual])}</b><span>${r[L.lances]?r[L.lances]+(r[L.lances]>1?" lances":" lance"):"sem lances"}</span></div></div>
+    <div class="sub">${esc(sub)}${sub?"<br>":""}${esc(loc.nome)}${loc.aprox?" (aprox.)":""} · <span class="num">${Math.round(o.d)}</span> km</div>
+    <div class="lot-b">
+      ${fipe}
+      <div class="chips">${chips.join("")}</div>
+      <details><summary>Custo, edital e detalhes</summary><div class="det">
+        <dl>
+          <dt>Valor no site</dt><dd>${brl2(r[L.atual])} (${r[L.lances]} ${r[L.lances]===1?"lance":"lances"} em ${ATUALIZ()})</dd>
+          <dt>Lance inicial</dt><dd>${ini}</dd>
+          <dt>Custo se fechar assim</dt><dd><b>${c.txt}</b></dd>
+        </dl>
+        <p class="small muted">${esc(c.conta)}. Fora transferência, IPVA do ano, vistoria e reparos.</p>
+        ${r[L.fipe]?`<p class="small muted">FIPE usada: ${esc(r[L.fipeModelo])}, ano ${r[L.fipeAno]}, tabela de ${esc(DATA.fipe_ref||"")}. É o modelo mais parecido na tabela.</p>`:""}
+        ${r[L.obs]?`<p><b>Descrição do leiloeiro:</b> ${esc(r[L.obs])}</p>`:""}
+        ${loc.end?`<p class="small">Local: ${esc(loc.end)}${loc.aprox?" (aproximado)":""}</p>`:""}
+        ${pracasHTML(a)}
+        <p class="small">${esc(a.org)} · ${esc(a.titLei)} ${esc(a.leiloeiro)}, ${matTxt(a)}${a.retirada?" · Retirada: "+esc(a.retirada):""}</p>
+        <div class="links"><a href="${esc(a.site)}" target="_blank" rel="noopener">Abrir no site oficial</a>${a.edital?`<a href="${esc(a.edital)}" target="_blank" rel="noopener">Edital (PDF)</a>`:""}</div>
+      </div></details>
+    </div>
+  </article>`;
+}
+function renderAtivos(){
+  const t=[];
+  if(S.locs!==null) t.push(`<button type="button" class="chipbtn" data-clear="locs">Só ${esc(S.locNome)} ✕</button>`);
+  if(S.auc!==null) t.push(`<button type="button" class="chipbtn" data-clear="auc">Só ${esc(AUCS[S.auc].titulo.slice(0,34))} ✕</button>`);
+  if(S.q) t.push(`<button type="button" class="chipbtn" data-clear="q">"${esc(S.q)}" ✕</button>`);
+  if(S.max) t.push(`<button type="button" class="chipbtn" data-clear="max">Até ${brl(S.max)} ✕</button>`);
+  if(S.ano) t.push(`<button type="button" class="chipbtn" data-clear="ano">A partir de ${S.ano} ✕</button>`);
+  if(t.length>1) t.push(`<button type="button" class="chipbtn" data-clear="all">Limpar tudo</button>`);
+  $("#ativos").innerHTML=t.join("");
+}
+function renderLots(b){
+  const list=ordenar(filtrar(b));
+  const ordTxt={perto:"mais perto primeiro",fecha:"os que fecham antes primeiro",barato:"menor valor primeiro",fipe:"mais abaixo da FIPE primeiro",lances:"mais disputados primeiro"}[S.ord];
+  $("#lh-count").textContent=list.length.toLocaleString("pt-BR")+" de "+b.length.toLocaleString("pt-BR")+" no raio · "+ordTxt;
+  if(!list.length){
+    $("#lots").innerHTML=`<div class="empty"><p style="margin:0">Nenhum veículo com esses filtros${S.raio?" neste raio":""}.</p><button type="button" class="btn" data-clear="all">Limpar filtros</button>${S.raio?`<button type="button" class="btn" data-raio0="1">Ver sem limite de distância</button>`:""}</div>`;
+    $("#mais").hidden=true;return;
+  }
+  $("#lots").innerHTML=list.slice(0,S.shown).map(lotHTML).join("");
+  const rest=list.length-S.shown;
+  $("#mais").hidden=rest<=0;
+  $("#mais").textContent="Mostrar mais "+Math.min(24,rest)+" (faltam "+rest+")";
+}
+
+/* ---------- render geral ---------- */
+function render(keepShown){
+  if(!keepShown) S.shown=24;
+  const b=base();
+  renderResumo(b);renderMapa(b);renderAucs(b);renderAtivos();renderLots(b);
+  avisarAltura();
+}
+
+/* ---------- altura para quem incorpora a página ---------- */
+let ultAlt=0;
+function avisarAltura(){
+  if(window.parent===window) return;
+  requestAnimationFrame(()=>{const h=Math.ceil(document.documentElement.scrollHeight);if(Math.abs(h-ultAlt)>2){ultAlt=h;try{window.parent.postMessage({lxAltura:h},"*");}catch(e){}}});
+}
+try{new ResizeObserver(avisarAltura).observe(document.body);}catch(e){setInterval(avisarAltura,800);}
+document.addEventListener("toggle",avisarAltura,true);
+
+/* ---------- eventos ---------- */
+function acharCidade(txt){
+  const t=norm(txt.replace(/\(([A-Z]{2})\)\s*$/,""));
+  const uf=(txt.match(/\(([A-Z]{2})\)\s*$/)||[])[1];
+  return CITIES.find(c=>norm(c[0])===t&&(!uf||c[1]===uf))||CITIES.find(c=>norm(c[0])===t)||CITIES.find(c=>norm(c[0]).startsWith(t)&&c[1]==="RJ")||CITIES.find(c=>norm(c[0]).startsWith(t));
+}
+function setCity(c){
+  S.city={n:c[0],uf:c[1],lat:c[2],lon:c[3],ibge:c[4]};
+  $("#cidade").value=c[0]+" ("+c[1]+")";
+  recalc();render();salvarPref();
+}
+function setCityTxt(txt){const c=acharCidade(txt);if(!c){$("#cidade-msg").textContent="Não achei essa cidade. Escolha uma opção da lista (Sudeste).";return;}setCity(c);}
+document.addEventListener("click",e=>{
+  const rb=e.target.closest("#raio button");if(rb){S.raio=+rb.dataset.v;renderRaio();render();salvarPref();return;}
+  const r0=e.target.closest("[data-raio0]");if(r0){S.raio=0;renderRaio();render();salvarPref();return;}
+  const tb=e.target.closest("#tipo button");if(tb){S.tipo=tb.dataset.v;document.querySelectorAll("#tipo button").forEach(b=>b.setAttribute("aria-pressed",b===tb));render();return;}
+  const ab=e.target.closest("[data-auc]");if(ab){const i=+ab.dataset.auc;S.auc=S.auc===i?null:i;render();if(S.auc!==null)$("#h-lotes").scrollIntoView({behavior:"smooth",block:"start"});return;}
+  const dep=e.target.closest(".dep");if(dep){const ids=dep.dataset.locs.split(",").map(Number);const igual=S.locs&&S.locs.join()===ids.join();S.locs=igual?null:ids;S.locNome=LOCS[ids[0]].lbl+(ids.length>1?" e região":"");render();return;}
+  if(e.target.id==="mais-aucs"){S.mostrarTodos=true;render(true);return;}
+  const cl=e.target.closest("[data-clear]");if(cl){const k=cl.dataset.clear;
+    if(k==="locs"||k==="all")S.locs=null; if(k==="auc"||k==="all")S.auc=null; if(k==="q"||k==="all"){S.q="";$("#busca").value="";}
+    if(k==="max"||k==="all"){S.max=0;$("#f-max").value="0";} if(k==="ano"||k==="all"){S.ano=0;$("#f-ano").value="0";}
+    if(k==="all"){S.tipo="todos";document.querySelectorAll("#tipo button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.v==="todos"));S.motor=true;$("#t-motor").checked=true;}
+    render();return;}
+  if(e.target.id==="mais"){S.shown+=24;render(true);return;}
+});
+document.addEventListener("keydown",e=>{const dep=e.target.closest&&e.target.closest(".dep");if(dep&&(e.key==="Enter"||e.key===" ")){e.preventDefault();dep.dispatchEvent(new MouseEvent("click",{bubbles:true}));}});
+
+/* ---------- alertas ---------- */
+const LS="leiloes-busca-alertas";
+function lerAlertas(){try{return JSON.parse(localStorage.getItem(LS)||"[]");}catch(e){return [];}}
+function salvarAlertas(l){try{localStorage.setItem(LS,JSON.stringify(l));}catch(e){}}
+function batem(al){
+  const q=norm(al.q);
+  return base().filter(o=>(!q||norm(o.r[L.marca]+" "+o.r[L.modelo]).includes(q))&&(al.tipo==="todos"||(al.tipo==="carros"?o.r[L.tipo]==="c":o.r[L.tipo]==="m"))&&(!al.max||o.r[L.atual]<=al.max)).length;
+}
+function renderAlertas(){
+  const l=lerAlertas();
+  $("#a-list").innerHTML=l.map((al,i)=>`<li><span><b>${esc(al.q)}</b> · ${al.tipo==="todos"?"carro ou moto":al.tipo==="carros"?"carro":"moto"}${al.max?" · até "+brl(al.max):""} · ${esc(al.cidade)}, ${al.raio?al.raio+" km":"sem limite"}<br><span class="muted">${batem(al)} no ar agora</span></span><button type="button" data-del="${i}">Apagar</button></li>`).join("");
+  avisarAltura();
+}
+
+/* ---------- início ---------- */
+function ligarEventos(){
+  $("#cidade").addEventListener("change",e=>setCityTxt(e.target.value));
+  $("#cidade").addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();setCityTxt(e.target.value);}});
+  $("#cidade").addEventListener("focus",e=>e.target.select());
+  let tq;$("#busca").addEventListener("input",e=>{clearTimeout(tq);tq=setTimeout(()=>{S.q=e.target.value.trim();render();},180);});
+  $("#f-max").addEventListener("change",e=>{S.max=+e.target.value;render();});
+  $("#f-ano").addEventListener("change",e=>{S.ano=+e.target.value;render();});
+  $("#f-ord").addEventListener("change",e=>{S.ord=e.target.value;render();});
+  $("#t-motor").addEventListener("change",e=>{S.motor=e.target.checked;render();});
+  $("#t-fim").addEventListener("change",e=>{S.fim=e.target.checked;render();});
+  $("#a-list").addEventListener("click",e=>{const b=e.target.closest("[data-del]");if(!b)return;const l=lerAlertas();l.splice(+b.dataset.del,1);salvarAlertas(l);renderAlertas();});
+  $("#aform").addEventListener("submit",e=>{
+    e.preventDefault();
+    const q=$("#a-q").value.trim();const msg=$("#a-msg");
+    if(!q){msg.hidden=false;msg.className="amsg warn";msg.textContent="Escreva o modelo que você procura, por exemplo CG 160.";$("#a-q").focus();return;}
+    const al={q,tipo:$("#a-tipo").value,max:+$("#a-max").value,cidade:S.city.n+" ("+S.city.uf+")",raio:S.raio,criado:new Date().toISOString()};
+    const n=batem(al);
+    const l=lerAlertas();l.unshift(al);salvarAlertas(l);renderAlertas();
+    msg.hidden=false;msg.className="amsg";
+    msg.textContent=`Alerta salvo neste aparelho. Hoje ${n===1?"tem 1 veículo":"tem "+n+" veículos"} assim até ${S.raio?S.raio+" km":"qualquer distância"} de ${S.city.n}.`;
+    $("#a-q").value="";avisarAltura();
+  });
+}
+function iniciar(){
+  AUCS=DATA.leiloes;LOCS=DATA.locais;LOTS=DATA.lotes;GERADO=DATA.gerado_em;
+  AUCS.forEach((a,i)=>{a.t=new Date(a.fim).getTime();const cnt={};LOTS.forEach(r=>{if(r[L.auc]===i)cnt[r[L.local]]=(cnt[r[L.local]]||0)+1;});a.locs=Object.keys(cnt).map(Number).sort((x,y)=>cnt[y]-cnt[x]);});
+  const g=new Date(GERADO),hoje=new Date();
+  const dia=g.toDateString()===hoje.toDateString()?"hoje":"em "+dd2(g.getDate())+"/"+dd2(g.getMonth()+1);
+  $("#captura").textContent="Atualizado "+dia+", às "+hora(g);
+  const nLei=new Set(AUCS.map(a=>a.leiloeiro)).size;
+  $("#sobre").textContent=`Reúne ${AUCS.length} leilões abertos de ${nLei} leiloeiros oficiais, com ${LOTS.length.toLocaleString("pt-BR")} veículos. Os dados são lidos dos sites dos leiloeiros várias vezes por dia; o valor muda a cada lance, então confira sempre no site oficial. FIPE de referência de ${DATA.fipe_ref||"este mês"}, pelo modelo mais parecido na tabela.`;
+  $("#fontes").innerHTML=DATA.fontes.filter(f=>f.lotes).map(f=>`<li>${esc(f.nome)}: <a href="https://${esc(f.site)}" target="_blank" rel="noopener">${esc(f.site)}</a> (${f.lotes} ${f.lotes===1?"veículo":"veículos"})</li>`).join("")+
+    `<li>Leiloeiros: <a href="https://www.jucerja.rj.gov.br/AuxiliaresComercio/Leiloeiros" target="_blank" rel="noopener">lista da JUCERJA</a></li><li>Preços de referência: Tabela FIPE</li>`;
+  const dl=document.createDocumentFragment();
+  [...CITIES].sort((a,b)=>(a[1]==="RJ"?0:1)-(b[1]==="RJ"?0:1)||a[0].localeCompare(b[0],"pt-BR")).forEach(c=>{const o=document.createElement("option");o.value=c[0]+" ("+c[1]+")";dl.appendChild(o);});
+  $("#lista-cidades").appendChild(dl);
+  let pref={};try{pref=JSON.parse(localStorage.getItem(LS_PREF)||"{}");}catch(e){}
+  const qs=new URLSearchParams(location.search);
+  let c0=(qs.get("cidade")&&acharCidade(qs.get("cidade")))||(pref.c&&CITIES.find(c=>c[4]===pref.c))||CITIES.find(c=>c[0]==="Rio de Janeiro"&&c[1]==="RJ");
+  if(pref.r!=null)S.raio=pref.r;
+  if(qs.get("raio")!=null)S.raio=+qs.get("raio");
+  $("#carregando").hidden=true;$("#app").hidden=false;
+  buildMapBase();renderRaio();ligarEventos();setCity(c0);renderAlertas();
+}
+Promise.all(["data/leiloes.json","data/cidades.json","data/mapa_rj.json"].map(u=>fetch(u,{cache:u.includes("leiloes")?"no-cache":"default"}).then(r=>{if(!r.ok)throw new Error(u+" "+r.status);return r.json();})))
+  .then(([d,c,g])=>{DATA=d;CITIES=c;GEO=g;iniciar();})
+  .catch(err=>{console.error(err);$("#carregando").textContent="Não consegui carregar os leilões agora. Tente de novo em alguns minutos.";avisarAltura();});
+</script>
+</body>
+</html>

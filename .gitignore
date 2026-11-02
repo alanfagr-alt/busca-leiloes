@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+site/data/leiloes.json
+site/data/status.json

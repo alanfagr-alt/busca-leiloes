@@ -1,0 +1,87 @@
+{
+ "com_fipe": 0,
+ "consultas_fipe": 0,
+ "fipe_limitada": false,
+ "fontes": [
+  {
+   "avisos": [],
+   "dominio": "www.consorciorioparkingcarioca.com",
+   "erro": "",
+   "leiloes_com_veiculos": 2,
+   "lotes": 265,
+   "nome": "Consórcio Rio Parking Carioca",
+   "ok": true,
+   "paginas_lidas": 2
+  },
+  {
+   "avisos": [],
+   "dominio": "www.edgarcarvalholeiloeiro.com.br",
+   "erro": "",
+   "leiloes_com_veiculos": 1,
+   "lotes": 63,
+   "nome": "Edgar de Carvalho Leiloeiro",
+   "ok": true,
+   "paginas_lidas": 1
+  },
+  {
+   "avisos": [],
+   "dominio": "www.depaulaonline.com.br",
+   "erro": "",
+   "leiloes_com_veiculos": 7,
+   "lotes": 9,
+   "nome": "De Paula Leilões",
+   "ok": true,
+   "paginas_lidas": 7
+  },
+  {
+   "avisos": [],
+   "dominio": "www.portellaleiloes.com.br",
+   "erro": "",
+   "leiloes_com_veiculos": 2,
+   "lotes": 7,
+   "nome": "Portella Leilões",
+   "ok": true,
+   "paginas_lidas": 2
+  },
+  {
+   "avisos": [
+    "leilão 168: página de impressão em formato inesperado: https://www.rodrigocostaleiloeiro.com.br/print/leiloes/168",
+    "leilão 262: página de impressão em formato inesperado: https://www.rodrigocostaleiloeiro.com.br/print/leiloes/262",
+    "leilão 264: página de impressão em formato inesperado: https://www.rodrigocostaleiloeiro.com.br/print/leiloes/264"
+   ],
+   "dominio": "www.rodrigocostaleiloeiro.com.br",
+   "erro": "",
+   "leiloes_com_veiculos": 5,
+   "lotes": 5,
+   "nome": "Rodrigo Costa Leiloeiro",
+   "ok": true,
+   "paginas_lidas": 5
+  },
+  {
+   "avisos": [],
+   "dominio": "www.rymerleiloes.com.br",
+   "erro": "",
+   "leiloes_com_veiculos": 6,
+   "lotes": 6,
+   "nome": "Rymer Leilões",
+   "ok": true,
+   "paginas_lidas": 6
+  },
+  {
+   "avisos": [],
+   "dominio": "www.leiloesja.com.br",
+   "erro": "",
+   "leiloes_com_veiculos": 0,
+   "lotes": 0,
+   "nome": "Leilões Já",
+   "ok": true,
+   "paginas_lidas": 0
+  }
+ ],
+ "gerado_em": "2026-11-02T10:25:12-03:00",
+ "ok": true,
+ "pedidos_aos_sites": 33,
+ "problemas": [],
+ "total_leiloes": 23,
+ "total_lotes": 355
+}

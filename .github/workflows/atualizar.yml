@@ -1,0 +1,100 @@
+name: Atualizar leilões
+
+on:
+  schedule:
+    # horários em UTC; no horário de Brasília: 6h07, 10h37, 14h37 e 18h37
+    - cron: "7 9 * * *"
+    - cron: "37 13 * * *"
+    - cron: "37 17 * * *"
+    - cron: "37 21 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["site/**", "robo/**", "config/**", "requirements.txt", ".github/workflows/**"]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  issues: write
+
+concurrency:
+  group: atualizar-leiloes
+  cancel-in-progress: false
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    environment:
+      name: github-pages
+      url: ${{ steps.publicar.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+
+      - name: Rodar os robôs
+        id: robo
+        run: |
+          set +e
+          python -m robo.montar
+          echo "codigo=$?" >> "$GITHUB_OUTPUT"
+
+      - name: Guardar o estado da rodada
+        run: |
+          git config user.name "robo-leiloes"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dados/estado.json dados/status.json dados/fipe_cache.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Atualização automática dos leilões"
+            git push || (git pull --rebase && git push)
+          fi
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Publicar a página
+        id: publicar
+        uses: actions/deploy-pages@v4
+
+      - name: Abrir ou fechar o aviso de problema
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            let st;
+            try { st = JSON.parse(fs.readFileSync('dados/status.json', 'utf8')); }
+            catch (e) { st = { ok: false, problemas: ['o robô não gerou o arquivo de status'], gerado_em: new Date().toISOString(), total_lotes: 0 }; }
+            const titulo = 'Robô dos leilões precisa de atenção';
+            const { data: abertas } = await github.rest.issues.listForRepo({ ...context.repo, state: 'open', per_page: 50 });
+            const aberta = abertas.find(i => i.title === titulo);
+            const lista = (st.problemas || []).map(p => '- ' + p).join('\n');
+            if (!st.ok) {
+              const corpo = `Rodada de ${st.gerado_em}\n\n${lista}\n\nVeículos no ar: ${st.total_lotes}. Detalhes em dados/status.json.`;
+              if (!aberta) {
+                await github.rest.issues.create({ ...context.repo, title: titulo, body: corpo });
+              } else if (!(aberta.body || '').includes(lista)) {
+                await github.rest.issues.update({ ...context.repo, issue_number: aberta.number, body: corpo });
+                await github.rest.issues.createComment({ ...context.repo, issue_number: aberta.number, body: 'O problema mudou:\n\n' + lista });
+              }
+            } else if (aberta) {
+              await github.rest.issues.createComment({ ...context.repo, issue_number: aberta.number, body: `Voltou ao normal na rodada de ${st.gerado_em}.` });
+              await github.rest.issues.update({ ...context.repo, issue_number: aberta.number, state: 'closed' });
+            }
+
+      - name: Marcar a rodada como falha se alguma fonte quebrou
+        if: steps.robo.outputs.codigo != '0'
+        run: |
+          echo "Alguma fonte falhou. Veja dados/status.json."
+          exit 1

@@ -1,0 +1,29 @@
+[
+  {
+    "chaves": ["localizados em MESQUITA", "RPC - MESQUITA"],
+    "dominio": "www.consorciorioparkingcarioca.com",
+    "nome": "Pátio RPC Mesquita",
+    "endereco": "Rua Cesário, 870, Mesquita",
+    "rotulo": "Mesquita",
+    "lat": -22.7705,
+    "lon": -43.4258
+  },
+  {
+    "chaves": ["localizados em VARGEM GRANDE", "RPC - VARGEM GRANDE"],
+    "dominio": "www.consorciorioparkingcarioca.com",
+    "nome": "Pátio RPC Vargem Grande",
+    "endereco": "Estrada dos Bandeirantes, 28.137, Vargem Grande, Rio de Janeiro",
+    "rotulo": "Vargem Grande",
+    "lat": -22.9855,
+    "lon": -43.492,
+    "aprox": true
+  },
+  {
+    "chaves": ["Benedito Hipolito", "Benedito Hipólito"],
+    "nome": "Depósito público da SEOP",
+    "endereco": "Rua Benedito Hipólito, 218, Cidade Nova, Rio de Janeiro",
+    "rotulo": "Cidade Nova",
+    "lat": -22.9084,
+    "lon": -43.199
+  }
+]
