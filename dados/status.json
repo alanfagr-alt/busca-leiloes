@@ -45,9 +45,9 @@
   },
   {
    "avisos": [
-    "leilão 168: página de impressão em formato inesperado: https://www.rodrigocostaleiloeiro.com.br/print/leiloes/168",
-    "leilão 262: página de impressão em formato inesperado: https://www.rodrigocostaleiloeiro.com.br/print/leiloes/262",
-    "leilão 264: página de impressão em formato inesperado: https://www.rodrigocostaleiloeiro.com.br/print/leiloes/264"
+    "leilão 168: sem página de impressão (revejo em 7 dias)",
+    "leilão 262: sem página de impressão (revejo em 7 dias)",
+    "leilão 264: sem página de impressão (revejo em 7 dias)"
    ],
    "dominio": "www.rodrigocostaleiloeiro.com.br",
    "erro": "",
@@ -78,7 +78,7 @@
    "paginas_lidas": 0
   }
  ],
- "gerado_em": "2026-11-02T10:30:27-03:00",
+ "gerado_em": "2026-11-02T10:33:33-03:00",
  "ok": true,
  "pedidos_aos_sites": 33,
  "problemas": [],
