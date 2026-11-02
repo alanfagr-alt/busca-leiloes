@@ -44,11 +44,7 @@
    "paginas_lidas": 2
   },
   {
-   "avisos": [
-    "leilão 168: sem página de impressão (revejo em 7 dias)",
-    "leilão 262: sem página de impressão (revejo em 7 dias)",
-    "leilão 264: sem página de impressão (revejo em 7 dias)"
-   ],
+   "avisos": [],
    "dominio": "www.rodrigocostaleiloeiro.com.br",
    "erro": "",
    "leiloes_com_veiculos": 5,
@@ -78,9 +74,9 @@
    "paginas_lidas": 0
   }
  ],
- "gerado_em": "2026-11-02T10:33:33-03:00",
+ "gerado_em": "2026-11-02T11:34:30-03:00",
  "ok": true,
- "pedidos_aos_sites": 33,
+ "pedidos_aos_sites": 30,
  "problemas": [],
  "total_leiloes": 23,
  "total_lotes": 355
