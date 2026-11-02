@@ -424,7 +424,7 @@ function pracasHTML(a){
 function renderAucs(b){
   const vis=new Set(b.map(o=>o.r[L.auc]));
   const order=AUCS.map((a,i)=>i).filter(i=>S.fim||AUCS[i].t>Date.now()).sort((x,y)=>(vis.has(y)-vis.has(x))||AUCS[x].t-AUCS[y].t||DA[x]-DA[y]);
-  const lim=S.mostrarTodos?order.length:12;
+  const lim=S.mostrarTodos?order.length:(window.innerWidth>=980?4:8);
   $("#aucs").innerHTML=order.slice(0,lim).map(i=>{const a=AUCS[i];const all=LOTS.filter(r=>r[L.auc]===i);const c=all.filter(r=>r[L.tipo]==="c").length;
     const inR=!S.raio||DA[i]<=S.raio;const q=quando(a.t,a.hora);const loc=LOCS[a.locs[0]];
     const partes=[c?c+(c===1?" carro":" carros"):"",all.length-c?(all.length-c)+(all.length-c===1?" moto":" motos"):""].filter(Boolean).join(" e ");
@@ -517,7 +517,7 @@ function render(keepShown){
 let ultAlt=0;
 function avisarAltura(){
   if(window.parent===window) return;
-  requestAnimationFrame(()=>{const h=Math.ceil(document.documentElement.scrollHeight);if(Math.abs(h-ultAlt)>2){ultAlt=h;try{window.parent.postMessage({lxAltura:h},"*");}catch(e){}}});
+  requestAnimationFrame(()=>{const w=document.querySelector(".wrap");const h=Math.ceil(w?w.getBoundingClientRect().height:document.body.scrollHeight);if(Math.abs(h-ultAlt)>2){ultAlt=h;try{window.parent.postMessage({lxAltura:h},"*");}catch(e){}}});
 }
 try{new ResizeObserver(avisarAltura).observe(document.body);}catch(e){setInterval(avisarAltura,800);}
 document.addEventListener("toggle",avisarAltura,true);
