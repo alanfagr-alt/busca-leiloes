@@ -1,17 +1,19 @@
 {
- "com_fipe": 322,
+ "com_fipe": 200,
  "consultas_fipe": 0,
  "fipe_limitada": false,
  "fontes": [
   {
-   "avisos": [],
+   "avisos": [
+    "leilão 60: sem página de impressão (revejo em 7 dias)"
+   ],
    "dominio": "www.consorciorioparkingcarioca.com",
    "erro": "",
-   "leiloes_com_veiculos": 2,
-   "lotes": 265,
+   "leiloes_com_veiculos": 1,
+   "lotes": 132,
    "nome": "Consórcio Rio Parking Carioca",
    "ok": true,
-   "paginas_lidas": 2
+   "paginas_lidas": 1
   },
   {
    "avisos": [],
@@ -31,7 +33,7 @@
    "lotes": 8,
    "nome": "De Paula Leilões",
    "ok": true,
-   "paginas_lidas": 7
+   "paginas_lidas": 6
   },
   {
    "avisos": [],
@@ -41,7 +43,7 @@
    "lotes": 7,
    "nome": "Portella Leilões",
    "ok": true,
-   "paginas_lidas": 2
+   "paginas_lidas": 3
   },
   {
    "avisos": [],
@@ -61,7 +63,7 @@
    "lotes": 6,
    "nome": "Rymer Leilões",
    "ok": true,
-   "paginas_lidas": 6
+   "paginas_lidas": 13
   },
   {
    "avisos": [],
@@ -74,10 +76,10 @@
    "paginas_lidas": 0
   }
  ],
- "gerado_em": "2026-11-03T11:30:40-03:00",
+ "gerado_em": "2026-11-03T15:22:50-03:00",
  "ok": true,
- "pedidos_aos_sites": 30,
+ "pedidos_aos_sites": 37,
  "problemas": [],
- "total_leiloes": 22,
- "total_lotes": 354
+ "total_leiloes": 21,
+ "total_lotes": 221
 }
