@@ -4,9 +4,7 @@
  "fipe_limitada": false,
  "fontes": [
   {
-   "avisos": [
-    "leilão 60: sem página de impressão (revejo em 7 dias)"
-   ],
+   "avisos": [],
    "dominio": "www.consorciorioparkingcarioca.com",
    "erro": "",
    "leiloes_com_veiculos": 1,
@@ -43,7 +41,7 @@
    "lotes": 7,
    "nome": "Portella Leilões",
    "ok": true,
-   "paginas_lidas": 3
+   "paginas_lidas": 2
   },
   {
    "avisos": [],
@@ -63,7 +61,7 @@
    "lotes": 6,
    "nome": "Rymer Leilões",
    "ok": true,
-   "paginas_lidas": 13
+   "paginas_lidas": 7
   },
   {
    "avisos": [],
@@ -76,9 +74,9 @@
    "paginas_lidas": 0
   }
  ],
- "gerado_em": "2026-11-03T15:22:50-03:00",
+ "gerado_em": "2026-11-03T19:19:54-03:00",
  "ok": true,
- "pedidos_aos_sites": 37,
+ "pedidos_aos_sites": 29,
  "problemas": [],
  "total_leiloes": 21,
  "total_lotes": 221
