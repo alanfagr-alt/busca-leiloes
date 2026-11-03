@@ -1,5 +1,5 @@
 {
- "com_fipe": 323,
+ "com_fipe": 322,
  "consultas_fipe": 0,
  "fipe_limitada": false,
  "fontes": [
@@ -27,8 +27,8 @@
    "avisos": [],
    "dominio": "www.depaulaonline.com.br",
    "erro": "",
-   "leiloes_com_veiculos": 7,
-   "lotes": 9,
+   "leiloes_com_veiculos": 6,
+   "lotes": 8,
    "nome": "De Paula Leilões",
    "ok": true,
    "paginas_lidas": 7
@@ -74,10 +74,10 @@
    "paginas_lidas": 0
   }
  ],
- "gerado_em": "2026-11-03T06:54:18-03:00",
+ "gerado_em": "2026-11-03T11:30:40-03:00",
  "ok": true,
  "pedidos_aos_sites": 30,
  "problemas": [],
- "total_leiloes": 23,
- "total_lotes": 355
+ "total_leiloes": 22,
+ "total_lotes": 354
 }
