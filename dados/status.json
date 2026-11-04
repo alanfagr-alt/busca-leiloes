@@ -41,7 +41,7 @@
    "lotes": 7,
    "nome": "Portella Leilões",
    "ok": true,
-   "paginas_lidas": 2
+   "paginas_lidas": 4
   },
   {
    "avisos": [],
@@ -71,12 +71,12 @@
    "lotes": 0,
    "nome": "Leilões Já",
    "ok": true,
-   "paginas_lidas": 4
+   "paginas_lidas": 0
   }
  ],
- "gerado_em": "2026-11-04T11:34:48-03:00",
+ "gerado_em": "2026-11-04T15:29:54-03:00",
  "ok": true,
- "pedidos_aos_sites": 33,
+ "pedidos_aos_sites": 31,
  "problemas": [],
  "total_leiloes": 21,
  "total_lotes": 221

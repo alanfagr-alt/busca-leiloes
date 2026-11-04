@@ -9,7 +9,7 @@
    "situacao": "sem_impressao"
   },
   "www.consorciorioparkingcarioca.com/61": {
-   "checado": "2026-11-04T11:34:48-03:00",
+   "checado": "2026-11-04T15:29:54-03:00",
    "fim": "2026-11-18T10:00:00-03:00",
    "iniciais": {
     "2026-11-18|1": 1607.93,
@@ -150,7 +150,7 @@
    "situacao": "sem_veiculos"
   },
   "www.depaulaonline.com.br/455": {
-   "checado": "2026-11-04T11:34:48-03:00",
+   "checado": "2026-11-04T15:29:54-03:00",
    "fim": "2026-11-23T16:00:00-03:00",
    "iniciais": {
     "2026-11-09|1": 7500.0
@@ -214,7 +214,7 @@
    "situacao": "sem_veiculos"
   },
   "www.depaulaonline.com.br/468": {
-   "checado": "2026-11-04T11:34:48-03:00",
+   "checado": "2026-11-04T15:29:54-03:00",
    "fim": "2026-11-05T16:10:00-03:00",
    "iniciais": {
     "2026-11-05|1": 11605.8
@@ -251,7 +251,7 @@
    "situacao": "sem_veiculos"
   },
   "www.depaulaonline.com.br/470": {
-   "checado": "2026-11-04T11:34:48-03:00",
+   "checado": "2026-11-04T15:29:54-03:00",
    "fim": "2026-12-15T16:00:00-03:00",
    "iniciais": {
     "2026-12-04|1": 19282.0
@@ -292,7 +292,7 @@
    "situacao": "sem_veiculos"
   },
   "www.depaulaonline.com.br/473": {
-   "checado": "2026-11-04T11:34:48-03:00",
+   "checado": "2026-11-04T15:29:54-03:00",
    "fim": "2026-12-16T14:00:00-03:00",
    "iniciais": {
     "2026-12-04|1": 22000.0
@@ -320,7 +320,7 @@
    "situacao": "veiculos"
   },
   "www.depaulaonline.com.br/474": {
-   "checado": "2026-11-04T11:34:48-03:00",
+   "checado": "2026-11-04T15:29:54-03:00",
    "fim": "2026-12-15T16:10:00-03:00",
    "iniciais": {
     "2026-12-04|1": 120137.0,
@@ -366,7 +366,7 @@
    "situacao": "sem_veiculos"
   },
   "www.depaulaonline.com.br/480": {
-   "checado": "2026-11-04T11:34:48-03:00",
+   "checado": "2026-11-04T15:29:54-03:00",
    "fim": "2026-12-15T11:00:00-03:00",
    "iniciais": {
     "2026-12-01|63": 72000.0
@@ -404,7 +404,7 @@
    "situacao": "veiculos"
   },
   "www.edgarcarvalholeiloeiro.com.br/664": {
-   "checado": "2026-11-04T11:34:48-03:00",
+   "checado": "2026-11-04T15:29:54-03:00",
    "fim": "2026-11-05T10:10:00-03:00",
    "iniciais": {},
    "meta": {
@@ -699,7 +699,7 @@
    "situacao": "sem_veiculos"
   },
   "www.portellaleiloes.com.br/1184": {
-   "checado": "2026-11-04T11:34:48-03:00",
+   "checado": "2026-11-04T15:29:54-03:00",
    "fim": "2026-11-11T12:00:00-03:00",
    "iniciais": {
     "2026-11-09|313.0": 42143.17,
@@ -737,7 +737,7 @@
    "situacao": "veiculos"
   },
   "www.portellaleiloes.com.br/1185": {
-   "checado": "2026-11-04T11:34:48-03:00",
+   "checado": "2026-11-04T15:29:54-03:00",
    "fim": "2026-11-11T12:30:00-03:00",
    "iniciais": {
     "2026-11-09|314": 60122.45
@@ -849,6 +849,14 @@
    "checado": "2026-11-03T15:22:50-03:00",
    "situacao": "sem_veiculos"
   },
+  "www.portellaleiloes.com.br/1208": {
+   "checado": "2026-11-04T15:29:54-03:00",
+   "situacao": "sem_veiculos"
+  },
+  "www.portellaleiloes.com.br/1209": {
+   "checado": "2026-11-04T15:29:54-03:00",
+   "situacao": "sem_veiculos"
+  },
   "www.portellaleiloes.com.br/159": {
    "checado": "2026-11-02T10:13:55-03:00",
    "situacao": "sem_veiculos"
@@ -894,7 +902,7 @@
    "situacao": "sem_veiculos"
   },
   "www.rodrigocostaleiloeiro.com.br/160": {
-   "checado": "2026-11-04T11:34:48-03:00",
+   "checado": "2026-11-04T15:29:54-03:00",
    "fim": "2026-12-03T13:03:00-03:00",
    "iniciais": {
     "2026-11-30|1": 13329.0
@@ -928,7 +936,7 @@
    "situacao": "sem_impressao"
   },
   "www.rodrigocostaleiloeiro.com.br/170": {
-   "checado": "2026-11-04T11:34:48-03:00",
+   "checado": "2026-11-04T15:29:54-03:00",
    "fim": "2026-11-26T13:03:00-03:00",
    "iniciais": {
     "2026-11-23|1": 66234.0
@@ -954,7 +962,7 @@
    "situacao": "sem_veiculos"
   },
   "www.rodrigocostaleiloeiro.com.br/208": {
-   "checado": "2026-11-04T11:34:48-03:00",
+   "checado": "2026-11-04T15:29:54-03:00",
    "fim": "2026-12-03T13:03:00-03:00",
    "iniciais": {
     "2026-11-30|1": 16825.0
@@ -1012,7 +1020,7 @@
    "situacao": "sem_impressao"
   },
   "www.rodrigocostaleiloeiro.com.br/265": {
-   "checado": "2026-11-04T11:34:48-03:00",
+   "checado": "2026-11-04T15:29:54-03:00",
    "fim": "2026-12-03T13:03:00-03:00",
    "iniciais": {
     "2026-11-30|1": 29654.0
@@ -1054,7 +1062,7 @@
    "situacao": "sem_veiculos"
   },
   "www.rodrigocostaleiloeiro.com.br/270": {
-   "checado": "2026-11-04T11:34:48-03:00",
+   "checado": "2026-11-04T15:29:54-03:00",
    "fim": "2026-12-09T13:03:00-03:00",
    "iniciais": {
     "2026-12-02|1": 8000.0
@@ -1116,7 +1124,7 @@
    "situacao": "sem_veiculos"
   },
   "www.rymerleiloes.com.br/256": {
-   "checado": "2026-11-04T11:34:48-03:00",
+   "checado": "2026-11-04T15:29:54-03:00",
    "fim": "2026-12-16T12:00:00-03:00",
    "iniciais": {
     "2026-12-14|1": 91908.0
@@ -1154,7 +1162,7 @@
    "situacao": "veiculos"
   },
   "www.rymerleiloes.com.br/258": {
-   "checado": "2026-11-04T11:34:48-03:00",
+   "checado": "2026-11-04T15:29:54-03:00",
    "fim": "2026-12-16T12:00:00-03:00",
    "iniciais": {
     "2026-12-14|1": 48763.5
@@ -1214,7 +1222,7 @@
    "situacao": "sem_veiculos"
   },
   "www.rymerleiloes.com.br/268": {
-   "checado": "2026-11-04T11:34:48-03:00",
+   "checado": "2026-11-04T15:29:54-03:00",
    "fim": "2026-11-26T12:00:00-03:00",
    "iniciais": {
     "2026-11-23|1": 200000.0
@@ -1252,7 +1260,7 @@
    "situacao": "veiculos"
   },
   "www.rymerleiloes.com.br/269": {
-   "checado": "2026-11-04T11:34:48-03:00",
+   "checado": "2026-11-04T15:29:54-03:00",
    "fim": "2026-11-26T12:00:00-03:00",
    "iniciais": {
     "2026-11-23|1": 200000.0
@@ -1302,7 +1310,7 @@
    "situacao": "sem_veiculos"
   },
   "www.rymerleiloes.com.br/273": {
-   "checado": "2026-11-04T11:34:48-03:00",
+   "checado": "2026-11-04T15:29:54-03:00",
    "fim": "2026-11-26T12:00:00-03:00",
    "iniciais": {
     "2026-11-23|1": 16548.0
@@ -1340,7 +1348,7 @@
    "situacao": "veiculos"
   },
   "www.rymerleiloes.com.br/274": {
-   "checado": "2026-11-04T11:34:48-03:00",
+   "checado": "2026-11-04T15:29:54-03:00",
    "fim": "2026-11-26T12:00:00-03:00",
    "iniciais": {
     "2026-11-23|1": 23354.0
@@ -1423,6 +1431,10 @@
   },
   "www.rymerleiloes.com.br/286": {
    "checado": "2026-11-04T11:34:48-03:00",
+   "situacao": "sem_veiculos"
+  },
+  "www.rymerleiloes.com.br/287": {
+   "checado": "2026-11-04T15:29:54-03:00",
    "situacao": "sem_veiculos"
   },
   "www.rymerleiloes.com.br/37": {
