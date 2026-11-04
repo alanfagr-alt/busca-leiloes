@@ -61,7 +61,7 @@
    "lotes": 6,
    "nome": "Rymer Leilões",
    "ok": true,
-   "paginas_lidas": 6
+   "paginas_lidas": 7
   },
   {
    "avisos": [],
@@ -71,12 +71,12 @@
    "lotes": 0,
    "nome": "Leilões Já",
    "ok": true,
-   "paginas_lidas": 0
+   "paginas_lidas": 4
   }
  ],
- "gerado_em": "2026-11-04T06:58:51-03:00",
+ "gerado_em": "2026-11-04T11:34:48-03:00",
  "ok": true,
- "pedidos_aos_sites": 28,
+ "pedidos_aos_sites": 33,
  "problemas": [],
  "total_leiloes": 21,
  "total_lotes": 221
