@@ -1,10 +1,13 @@
 {
- "com_fipe": 137,
+ "com_fipe": 136,
  "consultas_fipe": 0,
  "fipe_limitada": false,
  "fontes": [
   {
-   "avisos": [],
+   "avisos": [
+    "leilão 62: sem página de impressão (revejo em 7 dias)",
+    "leilão 66: sem página de impressão (revejo em 7 dias)"
+   ],
    "dominio": "www.consorciorioparkingcarioca.com",
    "erro": "",
    "leiloes_com_veiculos": 1,
@@ -21,17 +24,19 @@
    "lotes": 0,
    "nome": "Edgar de Carvalho Leiloeiro",
    "ok": true,
-   "paginas_lidas": 1
+   "paginas_lidas": 0
   },
   {
-   "avisos": [],
+   "avisos": [
+    "leilão 468: sem página de impressão (revejo em 7 dias)"
+   ],
    "dominio": "www.depaulaonline.com.br",
    "erro": "",
-   "leiloes_com_veiculos": 6,
-   "lotes": 8,
+   "leiloes_com_veiculos": 5,
+   "lotes": 7,
    "nome": "De Paula Leilões",
    "ok": true,
-   "paginas_lidas": 6
+   "paginas_lidas": 5
   },
   {
    "avisos": [],
@@ -41,7 +46,7 @@
    "lotes": 7,
    "nome": "Portella Leilões",
    "ok": true,
-   "paginas_lidas": 3
+   "paginas_lidas": 2
   },
   {
    "avisos": [],
@@ -61,7 +66,7 @@
    "lotes": 6,
    "nome": "Rymer Leilões",
    "ok": true,
-   "paginas_lidas": 6
+   "paginas_lidas": 7
   },
   {
    "avisos": [],
@@ -74,10 +79,10 @@
    "paginas_lidas": 0
   }
  ],
- "gerado_em": "2026-11-05T15:17:27-03:00",
+ "gerado_em": "2026-11-05T19:24:04-03:00",
  "ok": true,
- "pedidos_aos_sites": 29,
+ "pedidos_aos_sites": 30,
  "problemas": [],
- "total_leiloes": 20,
- "total_lotes": 158
+ "total_leiloes": 19,
+ "total_lotes": 157
 }

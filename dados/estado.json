@@ -9,7 +9,7 @@
    "situacao": "sem_impressao"
   },
   "www.consorciorioparkingcarioca.com/61": {
-   "checado": "2026-11-05T15:17:27-03:00",
+   "checado": "2026-11-05T19:24:04-03:00",
    "fim": "2026-11-18T10:00:00-03:00",
    "iniciais": {
     "2026-11-18|1": 1607.93,
@@ -141,6 +141,14 @@
    "meta_em": "2026-11-05T11:32:53-03:00",
    "situacao": "veiculos"
   },
+  "www.consorciorioparkingcarioca.com/62": {
+   "checado": "2026-11-05T19:24:04-03:00",
+   "situacao": "sem_impressao"
+  },
+  "www.consorciorioparkingcarioca.com/66": {
+   "checado": "2026-11-05T19:24:04-03:00",
+   "situacao": "sem_impressao"
+  },
   "www.depaulaonline.com.br/113": {
    "checado": "2026-11-02T10:13:55-03:00",
    "situacao": "sem_veiculos"
@@ -150,7 +158,7 @@
    "situacao": "sem_veiculos"
   },
   "www.depaulaonline.com.br/455": {
-   "checado": "2026-11-05T15:17:27-03:00",
+   "checado": "2026-11-05T19:24:04-03:00",
    "fim": "2026-11-23T16:00:00-03:00",
    "iniciais": {
     "2026-11-09|1": 7500.0
@@ -214,44 +222,15 @@
    "situacao": "sem_veiculos"
   },
   "www.depaulaonline.com.br/468": {
-   "checado": "2026-11-05T15:17:27-03:00",
-   "fim": "2026-11-05T16:10:00-03:00",
-   "iniciais": {
-    "2026-11-05|1": 11605.8
-   },
-   "meta": {
-    "datas": [
-     [
-      "22/10/2026",
-      "16",
-      "10"
-     ],
-     [
-      "05/11/2026",
-      "16",
-      "10"
-     ]
-    ],
-    "docs": [
-     {
-      "rotulo": "Edital",
-      "url": "https://static.suporteleiloes.com.br/depaulaonlinecombr/leiloes/468/documentos/sl-doc-468-6aac2c0275cbe-6aac2c0277cb9.pdf"
-     }
-    ],
-    "natureza": "Judicial",
-    "retirada": "",
-    "trecho": "Modalidade: Online 1º leilão Encerramento: 22/10/2026 a partir das 16:10 2º leilão Encerramento: 05/11/2026 a partir das 16:10 NOTA: O veículo está sendo vendido no estado, sem garantia de funcionamento e sem documentos. Será expedida a Carta de Arrematação pelo Juízo e Nota de Arrematação pelo Leiloeiro. A baixa de todos os gravames e a nova documentação junto ao Detran correspondente, será, obrigatoriamente, de responsabilidade do arrematante, o qual deverá requerer em Juízo o que for exigido pelos órgãos competentes para que seja transferida a propriedade do bem. ATENÇÃO: A IMAGEM DO VEÍCULO NO SITE É MERAMENTE ILUSTRATIVA, NÃO TEMOS A IMAGEM REAL DO VEÍCULO. Cadastre-se Edital Auditório Virtual Imprimir Forma de exibição: Ordenar por: Número de Lote Maior Valor Menor Valor Mais Visitados 1 Audi Modelo A3, 1.8, Ano 2000, Gasolina Valor 1º leilão: R$ 19.343,00 Valor 2º leilão: R$ 11.605,80 0 Lance Efetuar lance Mais detalhes <% alert.title %> <% alert.time %> × <% alert.message %> Visitas: 5101 Precisa de ajuda? Entre em contato conosco. Receba novidades por e-mail Cadastre seu e-mail abaixo e receba gratuitamente conteúdos exclusivos e todas as novidades do site com prioridade! Inscrever-se De Paula Leilões Copyright 2026 - depaulaonline.com.br Luiz Tenorio De Paula - Matrícula Nº 19 Daniele De Lima De Paula - Matrícula Nº 131 Institucional Quem Somos Perguntas frequentes Fale Conosco Marketplace Leilões Venda Direta Imóveis Veículos Nossas Políticas e Termos Política de Privacidade Fale conosco Rua da Assembleia, n° 93 Gr.1.103/4, Centro Rio de Janeiro, RJ, Cep. 20.011-001 (21) 99954-2464 (21) 2524-0545/6 [email protected] Site seguro Este site é 100% seguro, suas compras e seus dados são protegidos por criptografia e outras camadas de segurança.",
-    "visita": ""
-   },
-   "meta_em": "2026-11-05T11:32:53-03:00",
-   "situacao": "veiculos"
+   "checado": "2026-11-05T19:24:04-03:00",
+   "situacao": "sem_impressao"
   },
   "www.depaulaonline.com.br/469": {
    "checado": "2026-11-02T10:13:55-03:00",
    "situacao": "sem_veiculos"
   },
   "www.depaulaonline.com.br/470": {
-   "checado": "2026-11-05T15:17:27-03:00",
+   "checado": "2026-11-05T19:24:04-03:00",
    "fim": "2026-12-15T16:00:00-03:00",
    "iniciais": {
     "2026-12-04|1": 19282.0
@@ -292,7 +271,7 @@
    "situacao": "sem_veiculos"
   },
   "www.depaulaonline.com.br/473": {
-   "checado": "2026-11-05T15:17:27-03:00",
+   "checado": "2026-11-05T19:24:04-03:00",
    "fim": "2026-12-16T14:00:00-03:00",
    "iniciais": {
     "2026-12-04|1": 22000.0
@@ -320,7 +299,7 @@
    "situacao": "veiculos"
   },
   "www.depaulaonline.com.br/474": {
-   "checado": "2026-11-05T15:17:27-03:00",
+   "checado": "2026-11-05T19:24:04-03:00",
    "fim": "2026-12-15T16:10:00-03:00",
    "iniciais": {
     "2026-12-04|1": 120137.0,
@@ -366,7 +345,7 @@
    "situacao": "sem_veiculos"
   },
   "www.depaulaonline.com.br/480": {
-   "checado": "2026-11-05T15:17:27-03:00",
+   "checado": "2026-11-05T19:24:04-03:00",
    "fim": "2026-12-15T11:00:00-03:00",
    "iniciais": {
     "2026-12-01|63": 72000.0
@@ -680,7 +659,7 @@
    "situacao": "sem_veiculos"
   },
   "www.portellaleiloes.com.br/1184": {
-   "checado": "2026-11-05T15:17:27-03:00",
+   "checado": "2026-11-05T19:24:04-03:00",
    "fim": "2026-11-11T12:00:00-03:00",
    "iniciais": {
     "2026-11-09|313.0": 42143.17,
@@ -718,7 +697,7 @@
    "situacao": "veiculos"
   },
   "www.portellaleiloes.com.br/1185": {
-   "checado": "2026-11-05T15:17:27-03:00",
+   "checado": "2026-11-05T19:24:04-03:00",
    "fim": "2026-11-11T12:30:00-03:00",
    "iniciais": {
     "2026-11-09|314": 60122.45
@@ -895,7 +874,7 @@
    "situacao": "sem_veiculos"
   },
   "www.rodrigocostaleiloeiro.com.br/160": {
-   "checado": "2026-11-05T15:17:27-03:00",
+   "checado": "2026-11-05T19:24:04-03:00",
    "fim": "2026-12-03T13:03:00-03:00",
    "iniciais": {
     "2026-11-30|1": 13329.0
@@ -929,7 +908,7 @@
    "situacao": "sem_impressao"
   },
   "www.rodrigocostaleiloeiro.com.br/170": {
-   "checado": "2026-11-05T15:17:27-03:00",
+   "checado": "2026-11-05T19:24:04-03:00",
    "fim": "2026-11-26T13:03:00-03:00",
    "iniciais": {
     "2026-11-23|1": 66234.0
@@ -955,7 +934,7 @@
    "situacao": "sem_veiculos"
   },
   "www.rodrigocostaleiloeiro.com.br/208": {
-   "checado": "2026-11-05T15:17:27-03:00",
+   "checado": "2026-11-05T19:24:04-03:00",
    "fim": "2026-12-03T13:03:00-03:00",
    "iniciais": {
     "2026-11-30|1": 16825.0
@@ -1013,7 +992,7 @@
    "situacao": "sem_impressao"
   },
   "www.rodrigocostaleiloeiro.com.br/265": {
-   "checado": "2026-11-05T15:17:27-03:00",
+   "checado": "2026-11-05T19:24:04-03:00",
    "fim": "2026-12-03T13:03:00-03:00",
    "iniciais": {
     "2026-11-30|1": 29654.0
@@ -1055,7 +1034,7 @@
    "situacao": "sem_veiculos"
   },
   "www.rodrigocostaleiloeiro.com.br/270": {
-   "checado": "2026-11-05T15:17:27-03:00",
+   "checado": "2026-11-05T19:24:04-03:00",
    "fim": "2026-12-09T13:03:00-03:00",
    "iniciais": {
     "2026-12-02|1": 8000.0
@@ -1117,7 +1096,7 @@
    "situacao": "sem_veiculos"
   },
   "www.rymerleiloes.com.br/256": {
-   "checado": "2026-11-05T15:17:27-03:00",
+   "checado": "2026-11-05T19:24:04-03:00",
    "fim": "2026-12-16T12:00:00-03:00",
    "iniciais": {
     "2026-12-14|1": 91908.0
@@ -1155,7 +1134,7 @@
    "situacao": "veiculos"
   },
   "www.rymerleiloes.com.br/258": {
-   "checado": "2026-11-05T15:17:27-03:00",
+   "checado": "2026-11-05T19:24:04-03:00",
    "fim": "2026-12-16T12:00:00-03:00",
    "iniciais": {
     "2026-12-14|1": 48763.5
@@ -1215,7 +1194,7 @@
    "situacao": "sem_veiculos"
   },
   "www.rymerleiloes.com.br/268": {
-   "checado": "2026-11-05T15:17:27-03:00",
+   "checado": "2026-11-05T19:24:04-03:00",
    "fim": "2026-11-26T12:00:00-03:00",
    "iniciais": {
     "2026-11-23|1": 200000.0
@@ -1253,7 +1232,7 @@
    "situacao": "veiculos"
   },
   "www.rymerleiloes.com.br/269": {
-   "checado": "2026-11-05T15:17:27-03:00",
+   "checado": "2026-11-05T19:24:04-03:00",
    "fim": "2026-11-26T12:00:00-03:00",
    "iniciais": {
     "2026-11-23|1": 200000.0
@@ -1303,7 +1282,7 @@
    "situacao": "sem_veiculos"
   },
   "www.rymerleiloes.com.br/273": {
-   "checado": "2026-11-05T15:17:27-03:00",
+   "checado": "2026-11-05T19:24:04-03:00",
    "fim": "2026-11-26T12:00:00-03:00",
    "iniciais": {
     "2026-11-23|1": 16548.0
@@ -1341,7 +1320,7 @@
    "situacao": "veiculos"
   },
   "www.rymerleiloes.com.br/274": {
-   "checado": "2026-11-05T15:17:27-03:00",
+   "checado": "2026-11-05T19:24:04-03:00",
    "fim": "2026-11-26T12:00:00-03:00",
    "iniciais": {
     "2026-11-23|1": 23354.0
@@ -1432,6 +1411,10 @@
   },
   "www.rymerleiloes.com.br/289": {
    "checado": "2026-11-05T11:32:53-03:00",
+   "situacao": "sem_veiculos"
+  },
+  "www.rymerleiloes.com.br/290": {
+   "checado": "2026-11-05T19:24:04-03:00",
    "situacao": "sem_veiculos"
   },
   "www.rymerleiloes.com.br/37": {
