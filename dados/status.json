@@ -4,10 +4,7 @@
  "fipe_limitada": false,
  "fontes": [
   {
-   "avisos": [
-    "leilão 62: sem página de impressão (revejo em 7 dias)",
-    "leilão 66: sem página de impressão (revejo em 7 dias)"
-   ],
+   "avisos": [],
    "dominio": "www.consorciorioparkingcarioca.com",
    "erro": "",
    "leiloes_com_veiculos": 1,
@@ -19,17 +16,15 @@
   {
    "avisos": [],
    "dominio": "www.edgarcarvalholeiloeiro.com.br",
-   "erro": "",
+   "erro": "a lista de leilões veio vazia",
    "leiloes_com_veiculos": 0,
    "lotes": 0,
    "nome": "Edgar de Carvalho Leiloeiro",
-   "ok": true,
+   "ok": false,
    "paginas_lidas": 0
   },
   {
-   "avisos": [
-    "leilão 468: sem página de impressão (revejo em 7 dias)"
-   ],
+   "avisos": [],
    "dominio": "www.depaulaonline.com.br",
    "erro": "",
    "leiloes_com_veiculos": 5,
@@ -66,7 +61,7 @@
    "lotes": 6,
    "nome": "Rymer Leilões",
    "ok": true,
-   "paginas_lidas": 7
+   "paginas_lidas": 6
   },
   {
    "avisos": [],
@@ -76,13 +71,15 @@
    "lotes": 0,
    "nome": "Leilões Já",
    "ok": true,
-   "paginas_lidas": 0
+   "paginas_lidas": 2
   }
  ],
- "gerado_em": "2026-11-05T19:24:04-03:00",
- "ok": true,
- "pedidos_aos_sites": 30,
- "problemas": [],
+ "gerado_em": "2026-11-06T06:59:20-03:00",
+ "ok": false,
+ "pedidos_aos_sites": 28,
+ "problemas": [
+  "Edgar de Carvalho Leiloeiro: a lista de leilões veio vazia"
+ ],
  "total_leiloes": 19,
  "total_lotes": 157
 }
