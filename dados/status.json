@@ -16,12 +16,12 @@
   {
    "avisos": [],
    "dominio": "www.edgarcarvalholeiloeiro.com.br",
-   "erro": "a lista de leilões veio vazia",
+   "erro": "",
    "leiloes_com_veiculos": 0,
    "lotes": 0,
    "nome": "Edgar de Carvalho Leiloeiro",
-   "ok": false,
-   "paginas_lidas": 0
+   "ok": true,
+   "paginas_lidas": 2
   },
   {
    "avisos": [],
@@ -74,12 +74,10 @@
    "paginas_lidas": 0
   }
  ],
- "gerado_em": "2026-11-07T06:44:12-03:00",
- "ok": false,
- "pedidos_aos_sites": 26,
- "problemas": [
-  "Edgar de Carvalho Leiloeiro: a lista de leilões veio vazia"
- ],
+ "gerado_em": "2026-11-07T11:17:40-03:00",
+ "ok": true,
+ "pedidos_aos_sites": 28,
+ "problemas": [],
  "total_leiloes": 19,
  "total_lotes": 157
 }
