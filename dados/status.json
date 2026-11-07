@@ -51,7 +51,7 @@
    "lotes": 5,
    "nome": "Rodrigo Costa Leiloeiro",
    "ok": true,
-   "paginas_lidas": 6
+   "paginas_lidas": 5
   },
   {
    "avisos": [],
@@ -61,7 +61,7 @@
    "lotes": 6,
    "nome": "Rymer Leilões",
    "ok": true,
-   "paginas_lidas": 7
+   "paginas_lidas": 6
   },
   {
    "avisos": [],
@@ -74,9 +74,9 @@
    "paginas_lidas": 0
   }
  ],
- "gerado_em": "2026-11-06T19:16:56-03:00",
+ "gerado_em": "2026-11-07T06:44:12-03:00",
  "ok": false,
- "pedidos_aos_sites": 28,
+ "pedidos_aos_sites": 26,
  "problemas": [
   "Edgar de Carvalho Leiloeiro: a lista de leilões veio vazia"
  ],
