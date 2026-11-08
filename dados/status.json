@@ -51,7 +51,7 @@
    "lotes": 5,
    "nome": "Rodrigo Costa Leiloeiro",
    "ok": true,
-   "paginas_lidas": 7
+   "paginas_lidas": 5
   },
   {
    "avisos": [],
@@ -74,9 +74,9 @@
    "paginas_lidas": 0
   }
  ],
- "gerado_em": "2026-11-08T06:44:09-03:00",
+ "gerado_em": "2026-11-08T11:16:13-03:00",
  "ok": true,
- "pedidos_aos_sites": 28,
+ "pedidos_aos_sites": 26,
  "problemas": [],
  "total_leiloes": 19,
  "total_lotes": 157
