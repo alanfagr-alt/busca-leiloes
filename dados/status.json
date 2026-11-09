@@ -1,6 +1,6 @@
 {
  "com_fipe": 191,
- "consultas_fipe": 54,
+ "consultas_fipe": 0,
  "fipe_limitada": false,
  "fontes": [
   {
@@ -31,7 +31,7 @@
    "lotes": 8,
    "nome": "De Paula Leilões",
    "ok": true,
-   "paginas_lidas": 20
+   "paginas_lidas": 8
   },
   {
    "avisos": [],
@@ -41,21 +41,17 @@
    "lotes": 7,
    "nome": "Portella Leilões",
    "ok": true,
-   "paginas_lidas": 36
+   "paginas_lidas": 6
   },
   {
-   "avisos": [
-    "leilão 168: sem página de impressão (revejo em 7 dias)",
-    "leilão 262: sem página de impressão (revejo em 7 dias)",
-    "leilão 264: sem página de impressão (revejo em 7 dias)"
-   ],
+   "avisos": [],
    "dominio": "www.rodrigocostaleiloeiro.com.br",
    "erro": "",
    "leiloes_com_veiculos": 5,
    "lotes": 5,
    "nome": "Rodrigo Costa Leiloeiro",
    "ok": true,
-   "paginas_lidas": 17
+   "paginas_lidas": 5
   },
   {
    "avisos": [],
@@ -65,7 +61,7 @@
    "lotes": 6,
    "nome": "Rymer Leilões",
    "ok": true,
-   "paginas_lidas": 28
+   "paginas_lidas": 7
   },
   {
    "avisos": [],
@@ -75,12 +71,12 @@
    "lotes": 0,
    "nome": "Leilões Já",
    "ok": true,
-   "paginas_lidas": 46
+   "paginas_lidas": 0
   }
  ],
- "gerado_em": "2026-11-09T11:32:09-03:00",
+ "gerado_em": "2026-11-09T19:21:19-03:00",
  "ok": true,
- "pedidos_aos_sites": 161,
+ "pedidos_aos_sites": 35,
  "problemas": [],
  "total_leiloes": 21,
  "total_lotes": 215
