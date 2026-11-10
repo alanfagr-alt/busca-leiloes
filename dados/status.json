@@ -41,7 +41,7 @@
    "lotes": 7,
    "nome": "Portella Leilões",
    "ok": true,
-   "paginas_lidas": 2
+   "paginas_lidas": 3
   },
   {
    "avisos": [],
@@ -61,7 +61,7 @@
    "lotes": 6,
    "nome": "Rymer Leilões",
    "ok": true,
-   "paginas_lidas": 6
+   "paginas_lidas": 7
   },
   {
    "avisos": [],
@@ -71,12 +71,12 @@
    "lotes": 0,
    "nome": "Leilões Já",
    "ok": true,
-   "paginas_lidas": 0
+   "paginas_lidas": 2
   }
  ],
- "gerado_em": "2026-11-10T06:54:12-03:00",
+ "gerado_em": "2026-11-10T11:29:13-03:00",
  "ok": true,
- "pedidos_aos_sites": 28,
+ "pedidos_aos_sites": 32,
  "problemas": [],
  "total_leiloes": 21,
  "total_lotes": 215
