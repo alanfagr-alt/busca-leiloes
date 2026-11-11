@@ -1,5 +1,5 @@
 {
- "com_fipe": 191,
+ "com_fipe": 190,
  "consultas_fipe": 0,
  "fipe_limitada": false,
  "fontes": [
@@ -37,8 +37,8 @@
    "avisos": [],
    "dominio": "www.portellaleiloes.com.br",
    "erro": "",
-   "leiloes_com_veiculos": 2,
-   "lotes": 7,
+   "leiloes_com_veiculos": 1,
+   "lotes": 6,
    "nome": "Portella Leilões",
    "ok": true,
    "paginas_lidas": 2
@@ -71,13 +71,13 @@
    "lotes": 0,
    "nome": "Leilões Já",
    "ok": true,
-   "paginas_lidas": 0
+   "paginas_lidas": 1
   }
  ],
- "gerado_em": "2026-11-11T06:56:51-03:00",
+ "gerado_em": "2026-11-11T11:30:33-03:00",
  "ok": true,
- "pedidos_aos_sites": 29,
+ "pedidos_aos_sites": 30,
  "problemas": [],
- "total_leiloes": 21,
- "total_lotes": 215
+ "total_leiloes": 20,
+ "total_lotes": 214
 }
