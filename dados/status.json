@@ -1,5 +1,5 @@
 {
- "com_fipe": 190,
+ "com_fipe": 189,
  "consultas_fipe": 0,
  "fipe_limitada": false,
  "fontes": [
@@ -18,7 +18,7 @@
    "dominio": "www.edgarcarvalholeiloeiro.com.br",
    "erro": "",
    "leiloes_com_veiculos": 1,
-   "lotes": 57,
+   "lotes": 56,
    "nome": "Edgar de Carvalho Leiloeiro",
    "ok": true,
    "paginas_lidas": 1
@@ -41,7 +41,7 @@
    "lotes": 0,
    "nome": "Portella Leilões",
    "ok": true,
-   "paginas_lidas": 0
+   "paginas_lidas": 2
   },
   {
    "avisos": [],
@@ -74,10 +74,10 @@
    "paginas_lidas": 0
   }
  ],
- "gerado_em": "2026-11-12T11:31:57-03:00",
+ "gerado_em": "2026-11-12T15:27:33-03:00",
  "ok": true,
- "pedidos_aos_sites": 27,
+ "pedidos_aos_sites": 31,
  "problemas": [],
  "total_leiloes": 19,
- "total_lotes": 208
+ "total_lotes": 207
 }
