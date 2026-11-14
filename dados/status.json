@@ -21,7 +21,7 @@
    "lotes": 56,
    "nome": "Edgar de Carvalho Leiloeiro",
    "ok": true,
-   "paginas_lidas": 1
+   "paginas_lidas": 2
   },
   {
    "avisos": [],
@@ -74,9 +74,9 @@
    "paginas_lidas": 0
   }
  ],
- "gerado_em": "2026-11-14T06:44:26-03:00",
+ "gerado_em": "2026-11-14T11:19:23-03:00",
  "ok": true,
- "pedidos_aos_sites": 26,
+ "pedidos_aos_sites": 27,
  "problemas": [],
  "total_leiloes": 19,
  "total_lotes": 207
