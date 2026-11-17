@@ -71,12 +71,12 @@
    "lotes": 0,
    "nome": "Leilões Já",
    "ok": true,
-   "paginas_lidas": 1
+   "paginas_lidas": 0
   }
  ],
- "gerado_em": "2026-11-16T22:02:41-03:00",
+ "gerado_em": "2026-11-17T01:09:59-03:00",
  "ok": true,
- "pedidos_aos_sites": 26,
+ "pedidos_aos_sites": 25,
  "problemas": [],
  "total_leiloes": 18,
  "total_lotes": 205
