@@ -4,9 +4,7 @@
  "fipe_limitada": false,
  "fontes": [
   {
-   "avisos": [
-    "leilão 61: sem página de impressão (revejo em 7 dias)"
-   ],
+   "avisos": [],
    "dominio": "www.consorciorioparkingcarioca.com",
    "erro": "",
    "leiloes_com_veiculos": 0,
@@ -63,7 +61,7 @@
    "lotes": 6,
    "nome": "Rymer Leilões",
    "ok": true,
-   "paginas_lidas": 8
+   "paginas_lidas": 6
   },
   {
    "avisos": [],
@@ -73,10 +71,10 @@
    "lotes": 0,
    "nome": "Leilões Já",
    "ok": true,
-   "paginas_lidas": 1
+   "paginas_lidas": 4
   }
  ],
- "gerado_em": "2026-11-18T14:56:41-03:00",
+ "gerado_em": "2026-11-18T18:33:19-03:00",
  "ok": true,
  "pedidos_aos_sites": 29,
  "problemas": [],
