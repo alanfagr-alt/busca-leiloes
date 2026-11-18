@@ -9,137 +9,8 @@
    "situacao": "sem_impressao"
   },
   "www.consorciorioparkingcarioca.com/61": {
-   "checado": "2026-11-18T00:07:05-03:00",
-   "fim": "2026-11-18T10:00:00-03:00",
-   "iniciais": {
-    "2026-11-18|1": 1607.93,
-    "2026-11-18|100": 2340.92,
-    "2026-11-18|102": 2247.37,
-    "2026-11-18|103": 2695.3,
-    "2026-11-18|104": 2652.46,
-    "2026-11-18|105": 2652.46,
-    "2026-11-18|106": 2247.37,
-    "2026-11-18|107": 2247.37,
-    "2026-11-18|108": 2251.31,
-    "2026-11-18|11": 1263.78,
-    "2026-11-18|110": 2273.67,
-    "2026-11-18|111": 2480.94,
-    "2026-11-18|112": 2218.07,
-    "2026-11-18|114": 2533.7,
-    "2026-11-18|115": 2273.67,
-    "2026-11-18|116": 3267.34,
-    "2026-11-18|117": 2512.6,
-    "2026-11-18|118": 2779.88,
-    "2026-11-18|119": 2512.6,
-    "2026-11-18|120": 2512.6,
-    "2026-11-18|121": 2554.81,
-    "2026-11-18|123": 2993.29,
-    "2026-11-18|125": 2554.81,
-    "2026-11-18|126": 1774.87,
-    "2026-11-18|127": 2739.08,
-    "2026-11-18|13": 2511.58,
-    "2026-11-18|130": 518.81,
-    "2026-11-18|131": 531.88,
-    "2026-11-18|132": 2247.37,
-    "2026-11-18|15": 1520.66,
-    "2026-11-18|16": 1086.75,
-    "2026-11-18|17": 1999.78,
-    "2026-11-18|18": 1929.69,
-    "2026-11-18|19": 1232.44,
-    "2026-11-18|2": 2364.18,
-    "2026-11-18|20": 4423.98,
-    "2026-11-18|21": 1294.97,
-    "2026-11-18|22": 1294.97,
-    "2026-11-18|23": 1438.76,
-    "2026-11-18|24": 1094.63,
-    "2026-11-18|27": 1155.42,
-    "2026-11-18|28": 1339.85,
-    "2026-11-18|29": 1469.48,
-    "2026-11-18|3": 4262.94,
-    "2026-11-18|30": 1294.97,
-    "2026-11-18|31": 502.9,
-    "2026-11-18|33": 1432.15,
-    "2026-11-18|34": 1547.12,
-    "2026-11-18|35": 3629.12,
-    "2026-11-18|37": 1941.66,
-    "2026-11-18|38": 792.63,
-    "2026-11-18|39": 1327.57,
-    "2026-11-18|4": 985.64,
-    "2026-11-18|40": 1223.46,
-    "2026-11-18|41": 1845.74,
-    "2026-11-18|42": 629.21,
-    "2026-11-18|46": 4366.78,
-    "2026-11-18|47": 3094.3,
-    "2026-11-18|49": 985.64,
-    "2026-11-18|5": 846.9,
-    "2026-11-18|50": 1275.75,
-    "2026-11-18|51": 1482.08,
-    "2026-11-18|52": 4830.76,
-    "2026-11-18|54": 1025.01,
-    "2026-11-18|55": 5530.14,
-    "2026-11-18|56": 1327.57,
-    "2026-11-18|57": 4345.14,
-    "2026-11-18|59": 1797.86,
-    "2026-11-18|62": 1180.44,
-    "2026-11-18|63": 1959.77,
-    "2026-11-18|64": 1268.66,
-    "2026-11-18|65": 1063.44,
-    "2026-11-18|66": 1112.58,
-    "2026-11-18|68": 1941.66,
-    "2026-11-18|69": 1229.45,
-    "2026-11-18|7": 636.57,
-    "2026-11-18|70": 1941.66,
-    "2026-11-18|71": 1938.98,
-    "2026-11-18|72": 487.78,
-    "2026-11-18|73": 1724.0,
-    "2026-11-18|74": 531.88,
-    "2026-11-18|75": 1990.33,
-    "2026-11-18|76": 555.98,
-    "2026-11-18|78": 1732.5,
-    "2026-11-18|79": 1205.66,
-    "2026-11-18|8": 4546.96,
-    "2026-11-18|80": 1929.69,
-    "2026-11-18|82": 2004.19,
-    "2026-11-18|83": 1929.69,
-    "2026-11-18|84": 1246.14,
-    "2026-11-18|85": 1294.97,
-    "2026-11-18|86": 1734.08,
-    "2026-11-18|87": 518.81,
-    "2026-11-18|89": 1277.33,
-    "2026-11-18|9": 1112.58,
-    "2026-11-18|90": 522.0,
-    "2026-11-18|91": 1929.69,
-    "2026-11-18|92": 3884.79,
-    "2026-11-18|93": 2187.68,
-    "2026-11-18|94": 2480.94,
-    "2026-11-18|95": 2415.89,
-    "2026-11-18|99": 2103.73
-   },
-   "meta": {
-    "datas": [
-     [
-      "18/11/2026",
-      "10",
-      "00"
-     ]
-    ],
-    "docs": [
-     {
-      "rotulo": "Edital",
-      "url": "https://static.suporteleiloes.com.br/consorciorioparkingcariocacom/leiloes/406/documentos/sl-doc-406-6adc28456c2df-6adc28456d544.pdf"
-     },
-     {
-      "rotulo": "CATÁLOGO",
-      "url": "https://static.suporteleiloes.com.br/consorciorioparkingcariocacom/leiloes/406/documentos/sl-doc-406-6adc284678b9a-6adc28467983b.pdf"
-     }
-    ],
-    "natureza": "Extrajudicial",
-    "retirada": "Consulte ao",
-    "trecho": "Modalidade: Simultâneo Data única: 18/11/2026 - 10:00 Informação de visitação: Visitação - 02/12/2026 e 03/12/2026 Informação de retirada: Consulte ao Edital. Veículos localizados em VARGEM GRANDE O VEÍCULO SERÁ VENDIDO NO ESTADO GERAL EM QUE SE ENCONTRA, SEM GARANTIA DE MOTOR, CÂMBIO, PEÇAS, PARTE ELÉTRICA, ESTRUTURA OU SINISTROS JÁ OCORRIDOS EM QUALQUER CLASSIFICAÇÃO DE MONTA OU TIPO, CONSTANDO OU NÃO, NOS ÓRGÃOS COMPETENTES SERÁ DE RESPONSABILIDADE DO ARREMATANTE A REGULARIZAÇÃO OU SUBSTITUIÇÃO NECESSÁRIAS OU NOS CASOS DE AUSÊNCIAS E DIVERGÊNCIAS DE ETIQUETAS, SELOS, GRAVAÇÃO DO CHASSIS NOS VIDROS, QUILOMETRAGEM E ETC. AS FOTOS SÃO MERAMENTE ILUSTRATIVAS E O LEILOEIRO RECOMENDA A VISITAÇÃO PARA AVALIAÇÃO DAS CONDIÇÕES FÍSICAS DO VEÍCULO. Cadastre-se Edital CATÁLOGO Auditório Virtual Auditório Virtual Acompanhe em tempo real Imprimir Forma de exibição: Ordenar por: Número de Lote Maior Valor Menor Valor Mais Visitados Tipo do Bem Carros (13) Motos (119) 1 VW GOL SPECIAL- 2000/ 1999 -GASOLINA CONSERVADO SEM MOTOR 0 Lance Efetuar lance Mais detalhes 2 FIAT DOBLO CARGO- 2003/ 2003 -GASOLINA CONSERVADO SEM MOTOR 0 Lance Efetuar lance Mais detalhes 3 GM CELTA 2P LIFE- 2009/ 2008 -ALCO/GASOL CONSERVADO 1 Lance PANDAORJ Mesquita-RJ R$ 4.262,94 Lance Atual Efetuar lance Mais detalhes 4 YAMAHA YBR 125K- 2007/ 2007 -GASOLINA CONSERVADO 0 Lance Efetuar lance Mais detalhes 5 HONDA CBX 250 TWISTER- 2008/ 2008 -GASOLINA CONSERVADO SEM MOTOR 0 Lance Efetuar lance Mais detalhes 6 HONDA CG 150 SPORT- 2005/ 2005 -GASOLINA CONSERVADO 3 Lances SURFISTA021 São João de Meriti-RJ R$ 1.802,00 Lance Atual Efetuar lance Mais detalhes 7 HONDA CG 125 TITAN ES- 2001/ 2001 -GASOLINA CONSERVADO SEM MOTOR 0 Lance Efetuar lance Mais detalhes 8 CHEVROLET CLASSIC- 2010/ 2009 -GAS/ALC/GN CONSERVADO 1 La",
-    "visita": "Visitação - 02/12/2026 e 03/12/2026"
-   },
-   "meta_em": "2026-11-17T20:56:58-03:00",
-   "situacao": "veiculos"
+   "checado": "2026-11-18T14:56:41-03:00",
+   "situacao": "sem_impressao"
   },
   "www.consorciorioparkingcarioca.com/62": {
    "checado": "2026-11-05T19:24:04-03:00",
@@ -162,7 +33,7 @@
    "situacao": "sem_veiculos"
   },
   "www.depaulaonline.com.br/455": {
-   "checado": "2026-11-18T00:07:05-03:00",
+   "checado": "2026-11-18T14:56:41-03:00",
    "fim": "2026-12-11T12:30:00-03:00",
    "iniciais": {
     "2026-11-23|1": 3750.0,
@@ -235,7 +106,7 @@
    "situacao": "sem_veiculos"
   },
   "www.depaulaonline.com.br/470": {
-   "checado": "2026-11-18T00:07:05-03:00",
+   "checado": "2026-11-18T14:56:41-03:00",
    "fim": "2026-12-15T16:00:00-03:00",
    "iniciais": {
     "2026-12-04|1": 19282.0
@@ -276,7 +147,7 @@
    "situacao": "sem_impressao"
   },
   "www.depaulaonline.com.br/473": {
-   "checado": "2026-11-18T00:07:05-03:00",
+   "checado": "2026-11-18T14:56:41-03:00",
    "fim": "2026-12-16T14:00:00-03:00",
    "iniciais": {
     "2026-12-04|1": 22000.0
@@ -309,7 +180,7 @@
    "situacao": "veiculos"
   },
   "www.depaulaonline.com.br/474": {
-   "checado": "2026-11-18T00:07:05-03:00",
+   "checado": "2026-11-18T14:56:41-03:00",
    "fim": "2026-12-15T16:10:00-03:00",
    "iniciais": {
     "2026-12-04|1": 120137.0,
@@ -360,7 +231,7 @@
    "situacao": "sem_veiculos"
   },
   "www.depaulaonline.com.br/480": {
-   "checado": "2026-11-18T00:07:05-03:00",
+   "checado": "2026-11-18T14:56:41-03:00",
    "fim": "2026-12-16T11:00:00-03:00",
    "iniciais": {
     "2026-12-01|63": 72000.0
@@ -429,6 +300,10 @@
    "checado": "2026-11-17T18:52:54-03:00",
    "situacao": "sem_veiculos"
   },
+  "www.depaulaonline.com.br/488": {
+   "checado": "2026-11-18T14:56:41-03:00",
+   "situacao": "sem_veiculos"
+  },
   "www.edgarcarvalholeiloeiro.com.br/664": {
    "fim": "2026-11-05T10:10:00-03:00",
    "situacao": "encerrado"
@@ -446,7 +321,7 @@
    "situacao": "sem_veiculos"
   },
   "www.edgarcarvalholeiloeiro.com.br/680": {
-   "checado": "2026-11-18T00:07:05-03:00",
+   "checado": "2026-11-18T14:56:41-03:00",
    "fim": "2026-11-23T10:10:00-03:00",
    "iniciais": {
     "2026-11-23|11": 500.0,
@@ -671,7 +546,7 @@
    "situacao": "sem_veiculos"
   },
   "www.leiloesja.com.br/225": {
-   "checado": "2026-11-11T11:30:33-03:00",
+   "checado": "2026-11-18T14:56:41-03:00",
    "situacao": "sem_veiculos"
   },
   "www.leiloesja.com.br/226": {
@@ -1085,7 +960,7 @@
    "situacao": "sem_veiculos"
   },
   "www.rodrigocostaleiloeiro.com.br/160": {
-   "checado": "2026-11-18T00:07:05-03:00",
+   "checado": "2026-11-18T14:56:41-03:00",
    "fim": "2026-12-03T13:03:00-03:00",
    "iniciais": {
     "2026-11-30|1": 13329.0
@@ -1119,7 +994,7 @@
    "situacao": "sem_impressao"
   },
   "www.rodrigocostaleiloeiro.com.br/170": {
-   "checado": "2026-11-18T00:07:05-03:00",
+   "checado": "2026-11-18T14:56:41-03:00",
    "fim": "2026-11-26T13:03:00-03:00",
    "iniciais": {
     "2026-11-23|1": 66234.0
@@ -1166,7 +1041,7 @@
    "situacao": "sem_veiculos"
   },
   "www.rodrigocostaleiloeiro.com.br/208": {
-   "checado": "2026-11-18T00:07:05-03:00",
+   "checado": "2026-11-18T14:56:41-03:00",
    "fim": "2026-12-03T13:03:00-03:00",
    "iniciais": {
     "2026-11-30|1": 16825.0
@@ -1224,7 +1099,7 @@
    "situacao": "sem_impressao"
   },
   "www.rodrigocostaleiloeiro.com.br/265": {
-   "checado": "2026-11-18T00:07:05-03:00",
+   "checado": "2026-11-18T14:56:41-03:00",
    "fim": "2026-12-03T13:03:00-03:00",
    "iniciais": {
     "2026-11-30|1": 29654.0
@@ -1266,7 +1141,7 @@
    "situacao": "sem_veiculos"
   },
   "www.rodrigocostaleiloeiro.com.br/270": {
-   "checado": "2026-11-18T00:07:05-03:00",
+   "checado": "2026-11-18T14:56:41-03:00",
    "fim": "2026-12-09T13:03:00-03:00",
    "iniciais": {
     "2026-12-02|1": 8000.0
@@ -1348,7 +1223,7 @@
    "situacao": "sem_veiculos"
   },
   "www.rymerleiloes.com.br/256": {
-   "checado": "2026-11-18T00:07:05-03:00",
+   "checado": "2026-11-18T14:56:41-03:00",
    "fim": "2026-12-16T12:00:00-03:00",
    "iniciais": {
     "2026-12-14|1": 91908.0
@@ -1386,7 +1261,7 @@
    "situacao": "veiculos"
   },
   "www.rymerleiloes.com.br/258": {
-   "checado": "2026-11-18T00:07:05-03:00",
+   "checado": "2026-11-18T14:56:41-03:00",
    "fim": "2026-12-16T12:00:00-03:00",
    "iniciais": {
     "2026-12-14|1": 48763.5
@@ -1446,7 +1321,7 @@
    "situacao": "sem_veiculos"
   },
   "www.rymerleiloes.com.br/268": {
-   "checado": "2026-11-18T00:07:05-03:00",
+   "checado": "2026-11-18T14:56:41-03:00",
    "fim": "2026-11-26T12:00:00-03:00",
    "iniciais": {
     "2026-11-23|1": 200000.0
@@ -1484,7 +1359,7 @@
    "situacao": "veiculos"
   },
   "www.rymerleiloes.com.br/269": {
-   "checado": "2026-11-18T00:07:05-03:00",
+   "checado": "2026-11-18T14:56:41-03:00",
    "fim": "2026-11-26T12:00:00-03:00",
    "iniciais": {
     "2026-11-23|1": 200000.0
@@ -1534,7 +1409,7 @@
    "situacao": "sem_veiculos"
   },
   "www.rymerleiloes.com.br/273": {
-   "checado": "2026-11-18T00:07:05-03:00",
+   "checado": "2026-11-18T14:56:41-03:00",
    "fim": "2026-11-26T12:00:00-03:00",
    "iniciais": {
     "2026-11-23|1": 16548.0
@@ -1572,7 +1447,7 @@
    "situacao": "veiculos"
   },
   "www.rymerleiloes.com.br/274": {
-   "checado": "2026-11-18T00:07:05-03:00",
+   "checado": "2026-11-18T14:56:41-03:00",
    "fim": "2026-11-26T12:00:00-03:00",
    "iniciais": {
     "2026-11-23|1": 23354.0
@@ -1650,7 +1525,7 @@
    "situacao": "sem_veiculos"
   },
   "www.rymerleiloes.com.br/285": {
-   "checado": "2026-11-11T06:56:51-03:00",
+   "checado": "2026-11-18T14:56:41-03:00",
    "situacao": "sem_veiculos"
   },
   "www.rymerleiloes.com.br/286": {
@@ -1698,7 +1573,7 @@
    "situacao": "sem_veiculos"
   },
   "www.rymerleiloes.com.br/298": {
-   "checado": "2026-11-11T11:30:33-03:00",
+   "checado": "2026-11-18T14:56:41-03:00",
    "situacao": "sem_veiculos"
   },
   "www.rymerleiloes.com.br/299": {
