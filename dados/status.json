@@ -1,6 +1,6 @@
 {
  "com_fipe": 89,
- "consultas_fipe": 70,
+ "consultas_fipe": 0,
  "fipe_limitada": false,
  "fontes": [
   {
@@ -11,7 +11,7 @@
    "lotes": 0,
    "nome": "Consórcio Rio Parking Carioca",
    "ok": true,
-   "paginas_lidas": 1
+   "paginas_lidas": 0
   },
   {
    "avisos": [],
@@ -21,7 +21,7 @@
    "lotes": 84,
    "nome": "Edgar de Carvalho Leiloeiro",
    "ok": true,
-   "paginas_lidas": 3
+   "paginas_lidas": 2
   },
   {
    "avisos": [],
@@ -61,7 +61,7 @@
    "lotes": 6,
    "nome": "Rymer Leilões",
    "ok": true,
-   "paginas_lidas": 7
+   "paginas_lidas": 8
   },
   {
    "avisos": [],
@@ -74,9 +74,9 @@
    "paginas_lidas": 0
   }
  ],
- "gerado_em": "2026-11-19T15:10:09-03:00",
+ "gerado_em": "2026-11-19T18:45:08-03:00",
  "ok": true,
- "pedidos_aos_sites": 32,
+ "pedidos_aos_sites": 29,
  "problemas": [],
  "total_leiloes": 19,
  "total_lotes": 103
