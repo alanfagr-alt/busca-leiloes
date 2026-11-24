@@ -37,7 +37,7 @@
    "situacao": "sem_veiculos"
   },
   "www.depaulaonline.com.br/455": {
-   "checado": "2026-11-24T02:29:28-03:00",
+   "checado": "2026-11-24T17:05:49-03:00",
    "fim": "2026-12-11T12:30:00-03:00",
    "iniciais": {
     "2026-12-11|1": 3750.0
@@ -109,7 +109,7 @@
    "situacao": "sem_veiculos"
   },
   "www.depaulaonline.com.br/470": {
-   "checado": "2026-11-24T02:29:28-03:00",
+   "checado": "2026-11-24T17:05:49-03:00",
    "fim": "2026-12-15T16:00:00-03:00",
    "iniciais": {
     "2026-12-04|1": 19282.0
@@ -150,7 +150,7 @@
    "situacao": "sem_impressao"
   },
   "www.depaulaonline.com.br/473": {
-   "checado": "2026-11-24T02:29:28-03:00",
+   "checado": "2026-11-24T17:05:49-03:00",
    "fim": "2026-12-16T14:00:00-03:00",
    "iniciais": {
     "2026-12-04|1": 22000.0
@@ -183,7 +183,7 @@
    "situacao": "veiculos"
   },
   "www.depaulaonline.com.br/474": {
-   "checado": "2026-11-24T02:29:28-03:00",
+   "checado": "2026-11-24T17:05:49-03:00",
    "fim": "2026-12-15T16:10:00-03:00",
    "iniciais": {
     "2026-12-04|1": 120137.0,
@@ -234,7 +234,7 @@
    "situacao": "sem_veiculos"
   },
   "www.depaulaonline.com.br/480": {
-   "checado": "2026-11-24T02:29:28-03:00",
+   "checado": "2026-11-24T17:05:49-03:00",
    "fim": "2026-12-15T11:00:00-03:00",
    "iniciais": {
     "2026-12-01|63": 72000.0
@@ -315,6 +315,10 @@
    "checado": "2026-11-18T20:34:07-03:00",
    "situacao": "sem_veiculos"
   },
+  "www.depaulaonline.com.br/491": {
+   "checado": "2026-11-24T17:05:49-03:00",
+   "situacao": "sem_veiculos"
+  },
   "www.edgarcarvalholeiloeiro.com.br/664": {
    "fim": "2026-11-05T10:10:00-03:00",
    "situacao": "encerrado"
@@ -336,7 +340,7 @@
    "situacao": "encerrado"
   },
   "www.edgarcarvalholeiloeiro.com.br/683": {
-   "checado": "2026-11-24T02:29:28-03:00",
+   "checado": "2026-11-24T17:05:49-03:00",
    "fim": "2026-11-30T10:00:00-03:00",
    "iniciais": {
     "2026-11-30|10": 30000.0,
@@ -402,6 +406,108 @@
   "www.edgarcarvalholeiloeiro.com.br/687": {
    "checado": "2026-11-23T22:10:11-03:00",
    "situacao": "sem_veiculos"
+  },
+  "www.edgarcarvalholeiloeiro.com.br/690": {
+   "checado": "2026-11-24T17:05:49-03:00",
+   "fim": "2026-12-03T11:00:00-03:00",
+   "iniciais": {
+    "2026-12-03|10": 1800.0,
+    "2026-12-03|12": 700.0,
+    "2026-12-03|14": 900.0,
+    "2026-12-03|15": 1500.0,
+    "2026-12-03|16": 800.0,
+    "2026-12-03|17": 800.0,
+    "2026-12-03|19": 800.0,
+    "2026-12-03|2": 2500.0,
+    "2026-12-03|21": 200.0,
+    "2026-12-03|22": 700.0,
+    "2026-12-03|24": 300.0,
+    "2026-12-03|28": 600.0,
+    "2026-12-03|3": 2800.0,
+    "2026-12-03|30": 1500.0,
+    "2026-12-03|31": 1500.0,
+    "2026-12-03|32": 200.0,
+    "2026-12-03|33": 900.0,
+    "2026-12-03|34": 1800.0,
+    "2026-12-03|4": 1800.0,
+    "2026-12-03|5": 1800.0,
+    "2026-12-03|7": 3000.0,
+    "2026-12-03|8": 2100.0
+   },
+   "meta": {
+    "datas": [
+     [
+      "24/11/2026",
+      "15",
+      "30"
+     ],
+     [
+      "03/12/2026",
+      "11",
+      "00"
+     ]
+    ],
+    "docs": [
+     {
+      "rotulo": "Edital",
+      "url": "https://static.suporteleiloes.com.br/edgarcarvalholeiloeirocombr/leiloes/902/documentos/sl-doc-902-6b05d6fddfb31-6b05d6fde0be0.pdf"
+     }
+    ],
+    "natureza": "",
+    "retirada": "",
+    "trecho": "Modalidade: Online Data única Abertura: 24/11/2026 a partir das 15:30 Encerramento: 03/12/2026 a partir das 11:00 A visitação no Depósito Público da SEOP, localizado na Rua Benedito Hipólito, 218, Cidade Nova, Rio de Janeiro/RJ, dia 02/12/2026, de 09:00 às 16:00, Respeitando horário de almoço onde não haverá visitação. A retirada se dará no dia 14/12 nos mesmos horários e local de visitação: Rua Benedito Hipólito, 218, Cidade Nova, Rio de Janeiro/RJ A visita prévia é um direito do licitante e lhe é assegurado o acesso a todas as informações necessárias a formulação dos seus lances. Faça valer seu direito e visite o lote de seu interesse! Edital Auditório Virtual Acompanhe em tempo real Imprimir Forma de exibição: Ordenar por: Número de Lote Maior Valor Menor Valor Mais Visitados Tipo do Bem Carros (9) Motos (18) Marca/Montadora Fiat (3) Honda (15) NISSAN (1) Renault (4) Vw (1) Yamaha (3) Modelo Cbx 250 Twister (1) Cg 125 Fan Ks (2) Cg 125 Titan Ks (1) Cg 150 Fan Esi (1) Cg 150 Titan Ex (2) Cg 150 Titan Ks (1) Cg 160 Fan (1) Cg 160 Titan (2) Cg 160 Titan S (1) Cg150 Fan Esdi (1) Fazer Ys250 (1) Linea Essence 1.8 (1) Logan Pri 1616V (1) Neo At115 (1) Nxr160 Bros Esdd (1) Sandero Exp 16 (1) Sandero Exp 16Hp (1) Sandero Expr 16 (1) Siena 1.4 Tetrafuel (1) Siena Hlx Flex (1) Up Take Ma (1) Versa 10 (1) Xre 300 (1) Ybr125I Factor Ed (1) Ano 2004 (2) 2005 (1) 2006 (1) 2008 (1) 2009 (2) 2010 (2) 2011 (2) 2012 (2) 2013 (1) 2014 (3) 2015 (3) 2019 (1) 2021 (1) 2022 (2) 2023 (2) 2024 (1) LOTE 1 Fiat/Siena Hlx Flex Fiat/Siena Hlx Flex | LKO6061/RJ | 2007/2008 | Chassi: 9BD17241T83389591 | Renavam: 949613053 | Motor: P2*0349003* | Preta | Alco/Gasol | Veículo Conservado. Localização: Rio de Janeiro / RJ Valor inicial: R$ 2.000,00 1 Lance LUKAS1 Mangaratiba-RJ R$ 2.000,00 Lance Atual ",
+    "visita": "A visitação no Depósito Público da SEOP, localizado na Rua Benedito Hipólito, 218, Cidade Nova, Rio de Janeiro/RJ, dia 02/12/2026, de 09:00 às 16:00, Respeitando horário de almoço onde não haverá visitação"
+   },
+   "meta_em": "2026-11-24T17:05:49-03:00",
+   "situacao": "veiculos"
+  },
+  "www.edgarcarvalholeiloeiro.com.br/691": {
+   "checado": "2026-11-24T17:05:49-03:00",
+   "fim": "2026-12-03T10:10:00-03:00",
+   "iniciais": {
+    "2026-12-03|1": 2000.0,
+    "2026-12-03|18": 300.0,
+    "2026-12-03|25": 800.0,
+    "2026-12-03|30": 500.0,
+    "2026-12-03|31": 400.0,
+    "2026-12-03|32": 800.0,
+    "2026-12-03|33": 100.0,
+    "2026-12-03|34": 600.0,
+    "2026-12-03|35": 800.0,
+    "2026-12-03|36": 700.0,
+    "2026-12-03|39": 300.0,
+    "2026-12-03|42": 300.0,
+    "2026-12-03|44": 900.0,
+    "2026-12-03|48": 500.0,
+    "2026-12-03|51": 200.0,
+    "2026-12-03|52": 600.0
+   },
+   "meta": {
+    "datas": [
+     [
+      "24/11/2026",
+      "16",
+      "30"
+     ],
+     [
+      "03/12/2026",
+      "10",
+      "10"
+     ]
+    ],
+    "docs": [
+     {
+      "rotulo": "Edital",
+      "url": "https://static.suporteleiloes.com.br/edgarcarvalholeiloeirocombr/leiloes/903/documentos/sl-doc-903-6b05d7c123eef-6b05d7c124bbf.pdf"
+     }
+    ],
+    "natureza": "",
+    "retirada": "",
+    "trecho": "Modalidade: Online Data única Abertura: 24/11/2026 a partir das 16:30 Encerramento: 03/12/2026 a partir das 10:10 A visitação poderá ser feita no Depósito Público da SEOP, localizado na Rua Agaí, nº 1631, Santa Cruz, Rio de Janeiro, RJ, dia 02/12/2026 das 09h às 16h. A retirada dos lotes devidamente pagos ocorrerá no dia 14/12 no mesmo horário e local da visitação. Para maiores informações consulte o Edital de Leilão! Edital Auditório Virtual Acompanhe em tempo real Imprimir Forma de exibição: Ordenar por: Número de Lote Maior Valor Menor Valor Mais Visitados Tipo do Bem Carros (3) Motos (16) Marca/Montadora Citroen (1) Dafra (1) Honda (13) Imp (1) Vw (1) Yamaha (2) Modelo Biz 100 Es (1) Biz 125 Ex (1) Cb 300R (1) Cbx 200 Strada (1) Cbx 250 Twister (1) Cg 125 Fan Ks (1) Cg 125 Titan Es (1) Cg 150 Titan Es (1) Cg 150 Titan Ex (1) Cg 150 Titan Ks (1) Cg 160 Fan (1) Cg150 Fan Esdi (1) GOL MI (1) Nxr 160 Bros (1) Peugeot 306 Pas B 18 (1) PICASSO 16GLXFLX (1) Ybr 125E (1) Ybr150 Factor Ed (1) Zig 50 (1) Ano 1997 (1) 1999 (2) 2004 (1) 2005 (1) 2006 (1) 2007 (2) 2008 (1) 2009 (1) 2010 (1) 2011 (1) 2012 (1) 2013 (1) 2015 (2) 2017 (1) 2018 (1) 2021 (1) LOTE 1 Citroen/Picasso 16Glxflx Citroen/Picasso 16Glxflx | KXO0478/RJ | 2006/2007 | Chassi: 935CHN6A87B507026 | Renavam: 901579521 Motor: 10DBU40000043 | Prata | Alco/Gasol | Veículo Conservado. Localização: Rio de Janeiro / RJ Valor inicial: R$ 2.000,00 0 Lance Efetuar lance Mais detalhes LOTE 18 Vw/Gol Mi Vw/Gol Mi | LBP1133/RJ | 1997/1997 | Chassi: 9BWZZZ377VT053531 | Renavam: 671568329 Motor: AFZ057143 | Branca | Gasolina | Veículo Conservado. Localização: Rio de Janeiro / RJ Valor inicial: R$ 300,00 0 Lance Efetuar lance Mais detalhes LOTE 22 Imp/Peugeot 306 Pas B 18 Imp/Peugeot 306 Pas B 18 | LCT8135/RJ | 1998/1999 | Chassi:",
+    "visita": "A visitação poderá ser feita no Depósito Público da SEOP, localizado na Rua Agaí, nº 1631, Santa Cruz, Rio de Janeiro, RJ, dia 02/12/2026 das 09h às 16h"
+   },
+   "meta_em": "2026-11-24T17:05:49-03:00",
+   "situacao": "veiculos"
   },
   "www.leiloesja.com.br/10": {
    "checado": "2026-11-23T22:10:11-03:00",
@@ -499,6 +605,10 @@
    "checado": "2026-11-23T22:10:11-03:00",
    "situacao": "sem_veiculos"
   },
+  "www.leiloesja.com.br/198": {
+   "checado": "2026-11-24T17:05:49-03:00",
+   "situacao": "sem_veiculos"
+  },
   "www.leiloesja.com.br/20": {
    "checado": "2026-11-23T22:10:11-03:00",
    "situacao": "sem_veiculos"
@@ -529,6 +639,10 @@
   },
   "www.leiloesja.com.br/216": {
    "checado": "2026-11-18T18:33:19-03:00",
+   "situacao": "sem_veiculos"
+  },
+  "www.leiloesja.com.br/218": {
+   "checado": "2026-11-24T17:05:49-03:00",
    "situacao": "sem_veiculos"
   },
   "www.leiloesja.com.br/220": {
@@ -576,11 +690,11 @@
    "situacao": "sem_veiculos"
   },
   "www.leiloesja.com.br/244": {
-   "checado": "2026-11-17T15:24:58-03:00",
+   "checado": "2026-11-24T17:05:49-03:00",
    "situacao": "sem_veiculos"
   },
   "www.leiloesja.com.br/245": {
-   "checado": "2026-11-17T15:24:58-03:00",
+   "checado": "2026-11-24T17:05:49-03:00",
    "situacao": "sem_veiculos"
   },
   "www.leiloesja.com.br/246": {
@@ -858,7 +972,7 @@
    "situacao": "sem_veiculos"
   },
   "www.portellaleiloes.com.br/1217": {
-   "checado": "2026-11-17T15:24:58-03:00",
+   "checado": "2026-11-24T17:05:49-03:00",
    "situacao": "sem_veiculos"
   },
   "www.portellaleiloes.com.br/1218": {
@@ -898,19 +1012,27 @@
    "situacao": "sem_veiculos"
   },
   "www.portellaleiloes.com.br/1227": {
-   "checado": "2026-11-17T15:24:58-03:00",
+   "checado": "2026-11-24T17:05:49-03:00",
    "situacao": "sem_veiculos"
   },
   "www.portellaleiloes.com.br/1228": {
-   "checado": "2026-11-17T15:24:58-03:00",
+   "checado": "2026-11-24T17:05:49-03:00",
    "situacao": "sem_veiculos"
   },
   "www.portellaleiloes.com.br/1229": {
-   "checado": "2026-11-17T15:24:58-03:00",
+   "checado": "2026-11-24T17:05:49-03:00",
    "situacao": "sem_veiculos"
   },
   "www.portellaleiloes.com.br/1230": {
    "checado": "2026-11-19T15:10:09-03:00",
+   "situacao": "sem_veiculos"
+  },
+  "www.portellaleiloes.com.br/1231": {
+   "checado": "2026-11-24T17:05:49-03:00",
+   "situacao": "sem_veiculos"
+  },
+  "www.portellaleiloes.com.br/1232": {
+   "checado": "2026-11-24T17:05:49-03:00",
    "situacao": "sem_veiculos"
   },
   "www.portellaleiloes.com.br/159": {
@@ -922,7 +1044,7 @@
    "situacao": "sem_veiculos"
   },
   "www.portellaleiloes.com.br/327": {
-   "checado": "2026-11-24T02:29:28-03:00",
+   "checado": "2026-11-24T17:05:49-03:00",
    "fim": "2026-12-17T12:50:00-03:00",
    "iniciais": {
     "2026-12-15|319": 122621.25
@@ -991,7 +1113,7 @@
    "situacao": "sem_veiculos"
   },
   "www.rodrigocostaleiloeiro.com.br/160": {
-   "checado": "2026-11-24T02:29:28-03:00",
+   "checado": "2026-11-24T17:05:49-03:00",
    "fim": "2026-12-03T13:03:00-03:00",
    "iniciais": {
     "2026-11-30|1": 13329.0
@@ -1025,7 +1147,7 @@
    "situacao": "sem_impressao"
   },
   "www.rodrigocostaleiloeiro.com.br/170": {
-   "checado": "2026-11-24T02:29:28-03:00",
+   "checado": "2026-11-24T17:05:49-03:00",
    "fim": "2026-11-26T13:03:00-03:00",
    "iniciais": {
     "2026-11-26|1": 33117.0
@@ -1072,7 +1194,7 @@
    "situacao": "sem_veiculos"
   },
   "www.rodrigocostaleiloeiro.com.br/208": {
-   "checado": "2026-11-24T02:29:28-03:00",
+   "checado": "2026-11-24T17:05:49-03:00",
    "fim": "2026-12-03T13:03:00-03:00",
    "iniciais": {
     "2026-11-30|1": 16825.0
@@ -1130,7 +1252,7 @@
    "situacao": "sem_impressao"
   },
   "www.rodrigocostaleiloeiro.com.br/265": {
-   "checado": "2026-11-24T02:29:28-03:00",
+   "checado": "2026-11-24T17:05:49-03:00",
    "fim": "2026-12-03T13:03:00-03:00",
    "iniciais": {
     "2026-11-30|1": 29654.0
@@ -1172,7 +1294,7 @@
    "situacao": "sem_veiculos"
   },
   "www.rodrigocostaleiloeiro.com.br/270": {
-   "checado": "2026-11-24T02:29:28-03:00",
+   "checado": "2026-11-24T17:05:49-03:00",
    "fim": "2026-12-09T13:03:00-03:00",
    "iniciais": {
     "2026-12-02|1": 8000.0
@@ -1266,7 +1388,7 @@
    "situacao": "sem_veiculos"
   },
   "www.rymerleiloes.com.br/256": {
-   "checado": "2026-11-24T02:29:28-03:00",
+   "checado": "2026-11-24T17:05:49-03:00",
    "fim": "2026-12-16T12:00:00-03:00",
    "iniciais": {
     "2026-12-14|1": 91908.0
@@ -1304,7 +1426,7 @@
    "situacao": "veiculos"
   },
   "www.rymerleiloes.com.br/258": {
-   "checado": "2026-11-24T02:29:28-03:00",
+   "checado": "2026-11-24T17:05:49-03:00",
    "fim": "2026-12-16T12:00:00-03:00",
    "iniciais": {
     "2026-12-14|1": 48763.5
@@ -1452,7 +1574,7 @@
    "situacao": "sem_veiculos"
   },
   "www.rymerleiloes.com.br/273": {
-   "checado": "2026-11-24T02:29:28-03:00",
+   "checado": "2026-11-24T17:05:49-03:00",
    "fim": "2026-11-26T12:00:00-03:00",
    "iniciais": {
     "2026-11-26|1": 8274.0
@@ -1490,7 +1612,7 @@
    "situacao": "veiculos"
   },
   "www.rymerleiloes.com.br/274": {
-   "checado": "2026-11-24T02:29:28-03:00",
+   "checado": "2026-11-24T17:05:49-03:00",
    "fim": "2026-11-26T12:00:00-03:00",
    "iniciais": {
     "2026-11-26|1": 11677.0
@@ -1608,11 +1730,11 @@
    "situacao": "sem_veiculos"
   },
   "www.rymerleiloes.com.br/296": {
-   "checado": "2026-11-17T15:24:58-03:00",
+   "checado": "2026-11-24T17:05:49-03:00",
    "situacao": "sem_veiculos"
   },
   "www.rymerleiloes.com.br/297": {
-   "checado": "2026-11-17T15:24:58-03:00",
+   "checado": "2026-11-24T17:05:49-03:00",
    "situacao": "sem_veiculos"
   },
   "www.rymerleiloes.com.br/298": {

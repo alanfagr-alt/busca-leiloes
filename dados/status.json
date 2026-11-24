@@ -1,6 +1,6 @@
 {
- "com_fipe": 38,
- "consultas_fipe": 0,
+ "com_fipe": 84,
+ "consultas_fipe": 61,
  "fipe_limitada": false,
  "fontes": [
   {
@@ -17,11 +17,11 @@
    "avisos": [],
    "dominio": "www.edgarcarvalholeiloeiro.com.br",
    "erro": "",
-   "leiloes_com_veiculos": 1,
-   "lotes": 32,
+   "leiloes_com_veiculos": 3,
+   "lotes": 78,
    "nome": "Edgar de Carvalho Leiloeiro",
    "ok": true,
-   "paginas_lidas": 1
+   "paginas_lidas": 3
   },
   {
    "avisos": [],
@@ -31,7 +31,7 @@
    "lotes": 7,
    "nome": "De Paula Leilões",
    "ok": true,
-   "paginas_lidas": 5
+   "paginas_lidas": 6
   },
   {
    "avisos": [],
@@ -41,7 +41,7 @@
    "lotes": 1,
    "nome": "Portella Leilões",
    "ok": true,
-   "paginas_lidas": 1
+   "paginas_lidas": 7
   },
   {
    "avisos": [],
@@ -61,7 +61,7 @@
    "lotes": 4,
    "nome": "Rymer Leilões",
    "ok": true,
-   "paginas_lidas": 4
+   "paginas_lidas": 6
   },
   {
    "avisos": [],
@@ -71,13 +71,13 @@
    "lotes": 0,
    "nome": "Leilões Já",
    "ok": true,
-   "paginas_lidas": 0
+   "paginas_lidas": 4
   }
  ],
- "gerado_em": "2026-11-24T02:29:28-03:00",
+ "gerado_em": "2026-11-24T17:05:49-03:00",
  "ok": true,
- "pedidos_aos_sites": 23,
+ "pedidos_aos_sites": 40,
  "problemas": [],
- "total_leiloes": 16,
- "total_lotes": 49
+ "total_leiloes": 18,
+ "total_lotes": 95
 }
