@@ -21,19 +21,17 @@
    "lotes": 32,
    "nome": "Edgar de Carvalho Leiloeiro",
    "ok": true,
-   "paginas_lidas": 2
+   "paginas_lidas": 1
   },
   {
-   "avisos": [
-    "leilão 483: sem página de impressão (revejo em 7 dias)"
-   ],
+   "avisos": [],
    "dominio": "www.depaulaonline.com.br",
    "erro": "",
    "leiloes_com_veiculos": 5,
    "lotes": 7,
    "nome": "De Paula Leilões",
    "ok": true,
-   "paginas_lidas": 17
+   "paginas_lidas": 5
   },
   {
    "avisos": [],
@@ -43,20 +41,17 @@
    "lotes": 1,
    "nome": "Portella Leilões",
    "ok": true,
-   "paginas_lidas": 32
+   "paginas_lidas": 1
   },
   {
-   "avisos": [
-    "leilão 259: sem página de impressão (revejo em 7 dias)",
-    "leilão 260: sem página de impressão (revejo em 7 dias)"
-   ],
+   "avisos": [],
    "dominio": "www.rodrigocostaleiloeiro.com.br",
    "erro": "",
    "leiloes_com_veiculos": 5,
    "lotes": 5,
    "nome": "Rodrigo Costa Leiloeiro",
    "ok": true,
-   "paginas_lidas": 14
+   "paginas_lidas": 5
   },
   {
    "avisos": [],
@@ -66,7 +61,7 @@
    "lotes": 4,
    "nome": "Rymer Leilões",
    "ok": true,
-   "paginas_lidas": 18
+   "paginas_lidas": 4
   },
   {
    "avisos": [],
@@ -76,12 +71,12 @@
    "lotes": 0,
    "nome": "Leilões Já",
    "ok": true,
-   "paginas_lidas": 47
+   "paginas_lidas": 0
   }
  ],
- "gerado_em": "2026-11-23T22:10:11-03:00",
+ "gerado_em": "2026-11-24T00:28:00-03:00",
  "ok": true,
- "pedidos_aos_sites": 140,
+ "pedidos_aos_sites": 37,
  "problemas": [],
  "total_leiloes": 16,
  "total_lotes": 49
