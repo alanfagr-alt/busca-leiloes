@@ -1,6 +1,6 @@
 {
  "com_fipe": 85,
- "consultas_fipe": 2,
+ "consultas_fipe": 0,
  "fipe_limitada": false,
  "fontes": [
   {
@@ -61,7 +61,7 @@
    "lotes": 4,
    "nome": "Rymer Leilões",
    "ok": true,
-   "paginas_lidas": 6
+   "paginas_lidas": 4
   },
   {
    "avisos": [],
@@ -71,12 +71,12 @@
    "lotes": 0,
    "nome": "Leilões Já",
    "ok": true,
-   "paginas_lidas": 1
+   "paginas_lidas": 4
   }
  ],
- "gerado_em": "2026-11-25T16:06:56-03:00",
+ "gerado_em": "2026-11-25T19:41:51-03:00",
  "ok": true,
- "pedidos_aos_sites": 29,
+ "pedidos_aos_sites": 32,
  "problemas": [],
  "total_leiloes": 18,
  "total_lotes": 96
