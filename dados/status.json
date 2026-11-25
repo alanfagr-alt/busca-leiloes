@@ -54,17 +54,14 @@
    "paginas_lidas": 5
   },
   {
-   "avisos": [
-    "leilão 280: sem página de impressão (revejo em 7 dias)",
-    "leilão 281: sem página de impressão (revejo em 7 dias)"
-   ],
+   "avisos": [],
    "dominio": "www.rymerleiloes.com.br",
    "erro": "",
    "leiloes_com_veiculos": 4,
    "lotes": 4,
    "nome": "Rymer Leilões",
    "ok": true,
-   "paginas_lidas": 9
+   "paginas_lidas": 4
   },
   {
    "avisos": [],
@@ -77,9 +74,9 @@
    "paginas_lidas": 0
   }
  ],
- "gerado_em": "2026-11-24T22:34:39-03:00",
+ "gerado_em": "2026-11-25T01:33:00-03:00",
  "ok": true,
- "pedidos_aos_sites": 32,
+ "pedidos_aos_sites": 25,
  "problemas": [],
  "total_leiloes": 18,
  "total_lotes": 95
