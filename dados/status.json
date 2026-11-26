@@ -31,7 +31,7 @@
    "lotes": 7,
    "nome": "De Paula Leilões",
    "ok": true,
-   "paginas_lidas": 6
+   "paginas_lidas": 8
   },
   {
    "avisos": [],
@@ -41,7 +41,7 @@
    "lotes": 1,
    "nome": "Portella Leilões",
    "ok": true,
-   "paginas_lidas": 1
+   "paginas_lidas": 8
   },
   {
    "avisos": [],
@@ -61,7 +61,7 @@
    "lotes": 4,
    "nome": "Rymer Leilões",
    "ok": true,
-   "paginas_lidas": 4
+   "paginas_lidas": 6
   },
   {
    "avisos": [],
@@ -71,12 +71,12 @@
    "lotes": 0,
    "nome": "Leilões Já",
    "ok": true,
-   "paginas_lidas": 4
+   "paginas_lidas": 0
   }
  ],
- "gerado_em": "2026-11-25T19:41:51-03:00",
+ "gerado_em": "2026-11-25T22:08:29-03:00",
  "ok": true,
- "pedidos_aos_sites": 32,
+ "pedidos_aos_sites": 37,
  "problemas": [],
  "total_leiloes": 18,
  "total_lotes": 96
