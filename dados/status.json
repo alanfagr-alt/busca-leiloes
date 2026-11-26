@@ -1,6 +1,6 @@
 {
  "com_fipe": 170,
- "consultas_fipe": 56,
+ "consultas_fipe": 0,
  "fipe_limitada": false,
  "fontes": [
   {
@@ -21,7 +21,7 @@
    "lotes": 79,
    "nome": "Edgar de Carvalho Leiloeiro",
    "ok": true,
-   "paginas_lidas": 5
+   "paginas_lidas": 3
   },
   {
    "avisos": [],
@@ -41,19 +41,17 @@
    "lotes": 1,
    "nome": "Portella Leilões",
    "ok": true,
-   "paginas_lidas": 2
+   "paginas_lidas": 1
   },
   {
-   "avisos": [
-    "leilão 170: sem página de impressão (revejo em 7 dias)"
-   ],
+   "avisos": [],
    "dominio": "www.rodrigocostaleiloeiro.com.br",
    "erro": "",
    "leiloes_com_veiculos": 4,
    "lotes": 4,
    "nome": "Rodrigo Costa Leiloeiro",
    "ok": true,
-   "paginas_lidas": 4
+   "paginas_lidas": 6
   },
   {
    "avisos": [],
@@ -63,7 +61,7 @@
    "lotes": 2,
    "nome": "Rymer Leilões",
    "ok": true,
-   "paginas_lidas": 3
+   "paginas_lidas": 4
   },
   {
    "avisos": [],
@@ -73,12 +71,12 @@
    "lotes": 0,
    "nome": "Leilões Já",
    "ok": true,
-   "paginas_lidas": 1
+   "paginas_lidas": 0
   }
  ],
- "gerado_em": "2026-11-26T15:56:49-03:00",
+ "gerado_em": "2026-11-26T19:32:53-03:00",
  "ok": true,
- "pedidos_aos_sites": 30,
+ "pedidos_aos_sites": 27,
  "problemas": [],
  "total_leiloes": 16,
  "total_lotes": 204
