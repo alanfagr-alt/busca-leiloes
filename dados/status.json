@@ -21,7 +21,7 @@
    "lotes": 79,
    "nome": "Edgar de Carvalho Leiloeiro",
    "ok": true,
-   "paginas_lidas": 3
+   "paginas_lidas": 4
   },
   {
    "avisos": [],
@@ -61,7 +61,7 @@
    "lotes": 2,
    "nome": "Rymer Leilões",
    "ok": true,
-   "paginas_lidas": 2
+   "paginas_lidas": 3
   },
   {
    "avisos": [],
@@ -71,12 +71,12 @@
    "lotes": 0,
    "nome": "Leilões Já",
    "ok": true,
-   "paginas_lidas": 0
+   "paginas_lidas": 1
   }
  ],
- "gerado_em": "2026-11-27T00:45:48-03:00",
+ "gerado_em": "2026-11-27T15:49:38-03:00",
  "ok": true,
- "pedidos_aos_sites": 34,
+ "pedidos_aos_sites": 26,
  "problemas": [],
  "total_leiloes": 16,
  "total_lotes": 204
