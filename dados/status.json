@@ -31,7 +31,7 @@
    "lotes": 7,
    "nome": "De Paula Leilões",
    "ok": true,
-   "paginas_lidas": 6
+   "paginas_lidas": 5
   },
   {
    "avisos": [],
@@ -51,7 +51,7 @@
    "lotes": 4,
    "nome": "Rodrigo Costa Leiloeiro",
    "ok": true,
-   "paginas_lidas": 6
+   "paginas_lidas": 4
   },
   {
    "avisos": [],
@@ -74,9 +74,9 @@
    "paginas_lidas": 0
   }
  ],
- "gerado_em": "2026-11-27T21:40:53-03:00",
+ "gerado_em": "2026-11-28T00:30:09-03:00",
  "ok": true,
- "pedidos_aos_sites": 26,
+ "pedidos_aos_sites": 23,
  "problemas": [],
  "total_leiloes": 16,
  "total_lotes": 204
